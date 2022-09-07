@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background: white;
+    min-width: 250px;
+}
+
+footer {
+    background: black;
+    border: double 4px white;
+    padding: 20px 0;
+    color: white;
+    margin: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
