@@ -4,6 +4,42 @@ body {
     min-width: 250px;
 }
 
+nav {
+    align-content: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    text-shadow: lightblue 4px 1px 4px;
+    margin: auto;
+}
+
+h2 {
+    color: rgb(0, 110, 255);
+}
+
+.redes {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.redes li {
+    display: inline-block;
+
+}
+
+.card {
+    width: 15rem;
+    background: rgb(244, 245, 240);
+}
+
+.card-img-top {
+    border-radius: 10em;
+}
+
 footer {
     background: black;
     border: double 4px white;
