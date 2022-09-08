@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background: white;
+    min-width: 250px;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+nav {
+    align-content: center;
+}
+
+a {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+nav a:hover {
+    background-color: gray;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    text-shadow: lightblue 3px 1px 4px;
+    margin: auto;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+h2 {
+    color: rgb(0, 110, 255);
+    text-shadow: black 1.5px 1px 1px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+.redes {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.redes li {
+    display: inline-block;
+}
+
+.card {
+    width: 18rem;
+    background: rgb(244, 245, 240);
+}
+
+footer {
+    background: black;
+    border: double 4px white;
+    padding: 20px 0;
+    color: white;
+    margin: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
