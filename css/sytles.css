@@ -43,6 +43,7 @@ textarea {
     border: 3px solid rgb(0, 0, 0);
     background: transparent;
     font-size: 15px;
+    border-radius: 15px;
 }
 
 label {
@@ -218,6 +219,11 @@ textarea:valid~label {
         width: 100%;
 
     }
+}
+
+
+main {
+    margin: 30px;
 }
 
 /*aqui empieza cod css*/
