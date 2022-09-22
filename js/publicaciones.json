@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Diseño de Páginas Web",
+        "img": "../src/dweb.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Diseño de Aplicaciones Móviles",
+        "img": "../src/deapp.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Diseño Base de Datos",
+        "img": "../src/bd.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Mantenimiento de Sistemas",
+        "img": "../src/mans.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Actualización de Proyectos",
+        "img": "../src/actproy.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Asesoría Técnica",
+        "img": "../src/asesortec.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Creación de Sistema para Computadoras",
+        "img": "../src/creasis.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Diseño UX/UI",
+        "img": "../src/disux.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Cotización de Proyectos",
+        "img": "../src/cotproy.jpg",
+        "description": "Servicio de creación de página web"
+    },
+    {
+        "name": "Diseño Gráfico",
+        "img": "../src/disgra.jpg",
+        "description": "Servicio de creación de página web"
+    }
+]
