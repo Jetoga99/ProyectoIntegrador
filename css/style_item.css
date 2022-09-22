@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+a {
+    color: black;
+    font-family: 'poppins', sans-serif;
+}
+
 .footer {
     background-color: #24262b;
     margin-top: 20px;
