@@ -58,7 +58,7 @@ label {
 
 }
 
-button {
+#submit_btn {
     padding: 10px 0;
     color: white;
     outline: none;

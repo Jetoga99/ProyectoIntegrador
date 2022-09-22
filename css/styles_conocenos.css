@@ -4,6 +4,7 @@ body {
     margin: 0;
     background: white;
     min-width: 250px;
+    line-height: 1.5;
     animation-duration: 1.5s;
     animation-name: slidein;
 }
@@ -26,7 +27,7 @@ nav {
 
 a {
     color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'poppins', sans-serif;
 
 }
 
