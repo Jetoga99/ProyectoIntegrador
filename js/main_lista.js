@@ -1,86 +1,56 @@
-function addItem(item) /* {
-    const itemHTML = '<div class="card" style="width: 18rem;">\n' +
-        '    <img src="' + item.img + '" class="card-img-top" alt="image">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">' + item.name + '</h5>\n' +
-        '        <p class="card-text">' + item.description + '</p>\n' +
-        '        <a href="#" class="btn btn-primary">Add</a>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<br/>';
-    const itemsContainer = document.getElementById("list-items");
-    itemsContainer.innerHTML += itemHTML;
-} */ {
-    const itemHTML = '<div class="col-lg-4 col-md-6 d-flex align-items-stretch">\n' +
-        '<div class="card">\n' +
-        '<img src=' + item.img + ' class="card-img-top" alt="...">\n' +
-        '<div class="card-body">\n' +
-        ' <h4 class="card-title">' + item.name + '</h4>\n' +
-        '<p class="card-text">' + item.description + '</p>\n' +
-        '<a href="/index.html" class="stretched-link"></a>\n' +
-        '</div>\n' +
-        '</div>\n' +
-        '</div>';
-
-    const itemsContainer = document.getElementById("list-items");
-    itemsContainer.innerHTML += itemHTML;
-}
-
-
+let mainProds = document.getElementById("list-items")
 
 window.addEventListener("load", function () {
-    getData();
+  getData();
 });
 
 const getData = () => {
-    let promesa = fetch("/js/publicaciones.json", {
-        method: "GET"
-    });
-    promesa.then((response) => {
-        response.json().then((data) => {
-            console.log(data);
-            console.log(typeof (data));
-            data.forEach(producto => {
-                addItem(producto)
-            });
-            /* console.log(data.id,data.title);
-            div.innerHTML = data.title; */
-        }).catch((error) => {
-            console.error("Problema con formato de la respuesta" + error);
-        });
-    }).catch(error => {
-        console.log("Error en la solicitud" + error)
-    });
-}
-let navbar = document.getElementById("nav");
-window.addEventListener("load", function (e) {
-    navbar.innerHTML = `<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class='container'>
-        <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#">
-            <img src="../src/Logo.png" width="80" class="d-inline-block align-top" alt="">
-          </a>
-        </nav>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link navBar" href="../Index.html">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link navBar" href="./Conocenos.html">Quienes Somos <span
-                  class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./Lista_de_items.html">Servicios <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./contacto.html">Contacto <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
+  let promesa = fetch("/js/publicaciones.json", {
+    method: "GET"
+  });
+  promesa.then((response) => {
+    response.json().then((data) => {
+      console.log(data);
+      console.log(typeof (data));
+      data.forEach(producto => {
+        /* console.log(producto.id,producto.title) */
+        mainProds.innerHTML += `<div  card" style="width: 18rem;">
+        <img class="card-img-top" src="${producto.img}" alt="${producto.name}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${producto.name}</h5>
+          <p class="card-text">${producto.description.slice(0, 30)}...</p>
+        
+      <button type="button" class="btn btn-primary mt-auto" data-toggle="modal" data-target="#modal_${producto.id}">
+      Ver más
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modal_${producto.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">${producto.name}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          ${producto.description}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        <ol class="nav-item active">
-          <button type="button" class="btn btn-success">Iniciar Sesión</button>
-        </ol>
-      </div >
-    </nav > `;
-});
+      </div>
+    </div>
+    </div>
+      </div>`;
+
+      });
+    }).catch((error) => {
+      console.error("Problema con formato de la respuesta" + error);
+    });
+  }).catch(error => {
+    console.log("Error en la solicitud" + error)
+  });
+}
