@@ -256,6 +256,20 @@
     background: #24262b;
 }
 
+.card {
+    text-align: justify;
+    background: rgba(204, 204, 204, 0.1);
+    transition: all ease-in-out 0.3s;
+    height: 50vw;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 18vw;
+    object-fit: contain;
+}
+
+
 
 
 .footer {
