@@ -5,26 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de ítems</title>
+  <title>Contáctanos</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="icon" href="../src/logo.ico">
-  <link rel="stylesheet" href="../css/style_item.css">
+  <link rel="stylesheet" href="../css/sytles_contacto.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/fd5785194c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <div id="nav"></div>
+    <!-- aqui indicamos que ira la parte del encabezado -->
+    <div class="container">
+      <nav id="navbar" class="navbar" style="justify-content: center;">
+
+        <ul>
+          <li><a href="#">
+              <img src="../src/Logo.png" width="80" class=alt="">
+            </a></li>
+          <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
+          <li><a class="nav-link" href="./pages/Conocenos.html">Quienes Somos</a></li>
+          <li><a class="nav-link" href="./pages/Lista_de_items.html">Servicios</a></li>
+          <li><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+          <li><button type="button" class="btn btn-success"> Registarse </button></li>
+          <li><button type="button" class="btn btn-success"> Iniciar Sesión </button></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+
+
+      </nav>
+    </div>
   </header>
   <main class="container">
-    <h1>Productos</h1>
-    <section>
-      <div class="row" style="display: flexbox;justify-content: center;" id="list-items">
+    <div class="row row-cols-1 row-cols-md-3" id="list-items" style="display: flexbox;justify-content: center;"></div>
 
-      </div>
-    </section>
   </main>
   <script src="/js/main_lista.js"></script>
   <script src="/js/publicaciones.json"></script>
