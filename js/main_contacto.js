@@ -195,7 +195,7 @@ window.addEventListener("load", function (e) {
             </ul>
         </div>
     </div>
-    <ol class="nav-item active">
+    <ol class="nav-item active" >
         <button type="button" class="btn btn-success"> Iniciar Sesión </button>
     </ol>
 </nav>
