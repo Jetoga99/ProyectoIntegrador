@@ -28,7 +28,7 @@
         <div class="row">
           <div class="col">
             <div class="input-group  ">
-              <input maxlength="35" minlength="1" type="text" id="producto" required autofocus>
+              <input maxlength="35" minlength="1" type="text" id="producto"  class = "is-invalid"required autofocus>
               <label for="Nombre"><i class="fa-solid fa-user "></i> Nombre del producto</label>
             </div>
             <div class="input-group">
@@ -36,7 +36,7 @@
               <label for="descripcion"><i class="fas fa-comments"></i> Descripcion del producto e imagen</label>
             </div>
             <div class="input-group  ">
-              <input maxlength="35" minlength="1" type="text" id="imagen" required autofocus>
+              <input maxlength="35" minlength="1" type="file"  id="imagen" required >
               <label for="imagen"><i class="fa fa-file-image-o" aria-hidden="true"></i> Cargar imagen
               </label>
             </div>
@@ -46,8 +46,10 @@
           <button id="submit_btn" type="submit"><i class="fas fa-paper-plane "></i> Registrar</button>
         </div>
       </form>
+       <div class="alert alert-danger" role="alert" id="alerta" style="display:none"></div>
     </div>
   </main>
+  <script src="/js/formulario.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
