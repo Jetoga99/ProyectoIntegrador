@@ -2,11 +2,12 @@ let submit_btn = document.getElementById("submit_btn");
 let alerta = document.getElementById("alerta");
 let producto = document.getElementById("producto");
 let descripcion = document.getElementById("descripcion");
-let imagen = document.getElementById("imagen");
 let cont = 1;
 
 submit_btn.addEventListener("click", function (e) {
     e.preventDefault();
+    //imagen
+
     console.log(imagen.textContent);
     console.log(producto.value, descripcion.value);
     let servicio = { "id": 0, "name": producto.value, "img": "No imagen", "description": descripcion.value }
@@ -20,6 +21,7 @@ submit_btn.addEventListener("click", function (e) {
     setTimeout(() => {
         alerta.style.display = "none";
     }, 5000);
+
 });
 producto.addEventListener("blur", validar);
 descripcion.addEventListener("blur", validar);
@@ -43,19 +45,12 @@ function validar(e) {
     }
 
 };
-document.querySelector("#archivo").addEventListener("change",function () {
-    const reader = new archivoReader();
+document.querySelector("#archivo").addEventListener("load",function () {
+    const reader = new FileReader();
 
     reader.addEventListener("load", ()=>{
-        localStorage.setItem("recebt-image", reader.result);
+        localStorage.setItem("recent-image", reader.result);
+        console.log("yes I'm here");
         });
-        reader.readerAsDataUrl(this.files[0]);
+        reader.readAsDataURL(this.files[0]);
     });
-document.addEventListener("DOMContentLoaded", () => {
-    const recentImageDataUrl = localStorage.getItem("recent-image");
-    if (recentImageDataUrl) {
-        console.log("yes I'm here")
-
-        document.querySelector("#imagen").setAttribute("src", recentImageDataUrl);
-    }
-});
