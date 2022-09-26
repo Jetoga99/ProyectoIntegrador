@@ -42,4 +42,20 @@ function validar(e) {
         return true;
     }
 
-}
+};
+document.querySelector("#archivo").addEventListener("change",function () {
+    const reader = new archivoReader();
+
+    reader.addEventListener("load", ()=>{
+        localStorage.setItem("recebt-image", reader.result);
+        });
+        reader.readerAsDataUrl(this.files[0]);
+    });
+document.addEventListener("DOMContentLoaded", () => {
+    const recentImageDataUrl = localStorage.getItem("recent-image");
+    if (recentImageDataUrl) {
+        console.log("yes I'm here")
+
+        document.querySelector("#imagen").setAttribute("src", recentImageDataUrl);
+    }
+});
