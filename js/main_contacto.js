@@ -1,9 +1,10 @@
 let btnQuote = document.getElementById("submit_btn");
+const form = document.getElementById("subscribe");
+const div_base = document.getElementsByClassName("input-group ");
+
 let key = "informacion";
 let cont = 1;
 let usuarios = [];
-
-let flag = true;
 
 
 if (localStorage.getItem("informacion")) {
@@ -24,78 +25,65 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
     let usr_name = document.getElementById("Nombre").value;
     let usr_number = document.getElementById("Number").value;
     var usr_email = document.getElementById("email").value;
-    let mensaje = document.getElementById("message").value;
+    let mensaje = document.getElementById("message_1").value;
 
-    // cardText.innerHTML = quote(hour, rate, iva, extras.selectedIndex).toFixed(2);//
     if (!ValidateName(usr_name)) {
-        console.log("por favor ingrese un nombre valido");
+
         console.log(document.getElementById("Nombre").style.borderColor);
         document.getElementById("Nombre").style.borderColor = "#FF0000";
         usr_name = "";
         document.getElementById("Nombre").value = usr_name;
-        flag = false;
+        setTimeout(() => { }, (10 * 1000)); //me quede aqui mucho ojo
     } else {
 
         document.getElementById("Nombre").style.borderColor = "";
-        flag = true;
+
     }
 
 
-    if (!ValidateNumber(usr_number)) {
+    if (!(ValidateNumber(usr_number))) {
         console.log("por favor ingrese su numero de telefono a 10 digitos");
         console.log(document.getElementById("Number").style.borderColor);
         document.getElementById("Number").style.borderColor = "#FF0000";
         usr_number = 0;
-        flag = false;
+
 
     } else {
         document.getElementById("Number").value = usr_number;
         document.getElementById("Number").style.borderColor = "";
-        flag = true
+
     }
 
     if (!ValidateEmail(usr_email)) {
         console.log(document.getElementById("email").style.borderColor);
         document.getElementById("email").style.borderColor = "#FF0000";
-        flag = false
+
     } else {
         document.getElementById("email").style.borderColor = "";
-        flag = true
+
     }
 
 
 
-    if (!(document.getElementById("message").value)) {
+    if (!(document.getElementById("message_1").value)) {
         console.log("por favor ingrese un mensaje!");
-        console.log(document.getElementById("message").style.borderColor);
-        document.getElementById("message").style.borderColor = "#FF0000";
-        flag = false;
-    } else {
-        document.getElementById("message").style.borderColor = "";
-        flag = true
-    }
-    console.log(flag);
+        console.log(document.getElementById("message_1").style.borderColor);
+        document.getElementById("message_1").style.borderColor = "#FF0000";
 
-    if (flag) {
+    } else {
+        document.getElementById("message_1").style.borderColor = "";
+
+    }
+
+
+    if (((document.getElementById("message_1").value)) && (ValidateEmail(usr_email)) && ((ValidateNumber(usr_number))) && (ValidateName(usr_name))) {
 
         let new_user = { "usr_id": cont, "usr_fullName": usr_name, "usr_email": usr_email, "usr_phone": usr_number, "usr_message": mensaje };
         cont++;
         usuarios.push(new_user);
         console.log(usuarios);
+        form.submit();
         localStorage.setItem(key, JSON.stringify(usuarios));
-
-
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "itehuamarcial97@gmail.com",
-            Password: "BDF47B18E9F867EA9AEE31F950591EB846AE",
-            To: 'itehuamarcial97@gmail.com',
-            From: usr_email,
-            Subject: usr_name,
-            Body: mensaje
-        }).then(
-            message => alert("¡Tu información se ha enviado con éxito, espero pronto nuestra respuesta!")
-        );
         usr_email = "";
         document.getElementById("email").value = usr_email;
         usr_name = "";
@@ -103,12 +91,15 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
         usr_number = "";
         document.getElementById("Number").value = usr_number;
         mensaje = "";
-        document.getElementById("message").value = mensaje;
+        document.getElementById("message_1").value = mensaje;
+
     }
 
 
 
 });
+
+
 
 
 
