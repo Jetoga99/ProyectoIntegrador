@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Diseño de Páginas Web",
+        "img": "../src/dweb.jpg",
+        "description": "Servicio de creación y desarrolo de páginas web "
+    },
+    {
+        "id": 2,
+        "name": "Diseño de Aplicaciones Móviles",
+        "img": "../src/deapp.jpg",
+        "description": "Creación y desarrollo de aplicaciones para Android y Ios."
+    },
+    {
+        "id": 3,
+        "name": "Diseño Base de Datos",
+        "img": "../src/bd.jpg",
+        "description": "Servicio de Base de datos de grafos de alto rendimiento. "
+    },
+    {
+        "id": 4,
+        "name": "Mantenimiento de Sistemas",
+        "img": "../src/mans.jpg",
+        "description": "Servicio a Hardware,limpieza de eqipos y mantenimiento de software."
+    },
+    {
+        "id": 5,
+        "name": "Actualización de Proyectos",
+        "img": "../src/actproy.jpg",
+        "description": "Servicio de Actualización Tecnica, Contenido y de imagen o diseño web."
+    },
+    {
+        "id": 6,
+        "name": "Asesoría Técnica",
+        "img": "../src/asesortec.jpg",
+        "description": "Servicio de elavoración de informes, tareas o propuestas de nivel superior."
+    },
+    {
+        "id": 7,
+        "name": "Creación de Sistema para Computadoras",
+        "img": "../src/creasis.jpg",
+        "description": "Servicio de creación de productos digitales eficientes y seguros."
+    },
+    {
+        "id": 8,
+        "name": "Diseño UX/UI",
+        "img": "../src/disux.jpg",
+        "description": "Servicio de creación de interfaces centradas en el usuario."
+    },
+    {
+        "id": 9,
+        "name": "Cotización de Proyectos",
+        "img": "../src/cotproy.jpg",
+        "description": "Servicio de creación de proyectos personalizados a tu presupuesto."
+    },
+    {
+        "id": 10,
+        "name": "Diseño Gráfico",
+        "img": "../src/disgra.jpg",
+        "description": "Servicio de diseño de carteles, infografía, flyers, simbología, señalética y folletos."
+    }
+]
