@@ -483,4 +483,10 @@ main {
     margin: 30px;
 }
 
+
+span.alert1 {
+    color: #f00;
+    display: none;
+}
+
 /*aqui empieza cod css*/
