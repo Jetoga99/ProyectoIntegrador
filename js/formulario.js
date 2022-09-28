@@ -7,9 +7,8 @@ let cont = 1;
 
 submit_btn.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log(imagen.textContent);
     console.log(producto.value, descripcion.value);
-    let servicio = { "id": 0, "name": producto.value, "img": "No imagen", "description": descripcion.value }
+    let servicio = { "id": 0, "name": producto.value, "img": $image, "description": descripcion.value }
     localStorage.setItem("info", JSON.stringify(servicio));
 
     console.log(servicio);
@@ -43,14 +42,6 @@ function validar(e) {
     }
 
 };
-document.querySelector("#archivo").addEventListener("change",function () {
-    const reader = new archivoReader();
-
-    reader.addEventListener("load", ()=>{
-        localStorage.setItem("recebt-image", reader.result);
-        });
-        reader.readerAsDataUrl(this.files[0]);
-    });
 document.addEventListener("DOMContentLoaded", () => {
     const recentImageDataUrl = localStorage.getItem("recent-image");
     if (recentImageDataUrl) {
@@ -59,3 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#imagen").setAttribute("src", recentImageDataUrl);
     }
 });
+
+
+const $form = document.querySelector('#form')
+
+const $image = document.querySelector('#image')
+const $file = document.querySelector('#file')
+function renderImage(formData) {
+  const file = formData.get('image')
+  const image = URL.createObjectURL(file)
+  $image.setAttribute('src', image)
+}
+
+
+$file.addEventListener('change', (event) => {
+  const formData = new FormData($form)
+  renderImage(formData)
+})
