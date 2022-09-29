@@ -153,7 +153,6 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #e91e63;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -171,6 +170,12 @@
 .navbar .active:focus,
 .navbar li:hover>a {
     color: rgb(0, 0, 0);
+}
+
+/* aqui se agrega el sombredo del navbar al pasar el raton encima */
+nav a:hover {
+    background-color: rgb(216, 214, 214);
+    border-radius: 3px;
 }
 
 .mobile-nav-toggle {
@@ -276,7 +281,7 @@
 
 
 .footer {
-    background-color: #24262b;
+    background-color: black;
     margin-top: 20px;
     padding: 70px 0;
 }
@@ -311,7 +316,7 @@ a {
 
 .footer-col h4 {
     font: size 18px;
-    color: #ffffff;
+    color: white;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -325,7 +330,7 @@ a {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: black;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -374,9 +379,15 @@ a {
     background-color: #ffffff;
 }
 
+/* aqui se modifica el copyright */
+address {
+    color: white;
+    position: relative;
+    top: 70px;
+    left: 0px;
+}
 
 /*responsive*/
-
 @media (max-width:767px) {
     .footer-col {
         width: 50%;
@@ -397,4 +408,47 @@ main {
     margin: 30px;
 }
 
-/*aqui empieza cod css*/
+/*aqui va el css de regitro*/
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
+
+#btn_submit {
+    padding: 10px 0;
+    color: white;
+    outline: none;
+    background-color: black;
+    border: 1px solid rgb(62, 60, 60);
+    width: 95%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.container h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: small;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.container div {
+    font-weight: bolder;
+    text-align: left;
+    align-items: center;
+}
+
+.container form {
+    width: 100%;
+    margin-left: 30%;
+    margin-right: auto;
+}
