@@ -409,12 +409,11 @@ main {
 }
 
 /*aqui va el css de regitro*/
-.container {
+main {
     padding-top: 5%;
     padding-bottom: 5%;
+
 }
-
-
 
 #btn_submit {
     padding: 10px 0;
@@ -452,3 +451,5 @@ main {
     margin-left: 30%;
     margin-right: auto;
 }
+
+/*aqui termina el css de regitro*/
