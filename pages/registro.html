@@ -2,102 +2,104 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-  <header>
+    <header>
 
-    <!-- Just an image -->
+        <!-- Just an image -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <a class="navbar-brand" href="#">
-            <img src="/src/logo_empresa.jpeg" width="150" height="150" alt="">
-          </a>
-        </div>
-        <nav class="col-6">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="/src/logo_empresa.jpeg" width="150" height="150" alt="">
+                    </a>
+                </div>
+                <nav class="col-6">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="../Index.html">Inicio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="Conocenos.html">Conocenos <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Formulario_de_creacion.html">Formulario de creación</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Lista_de_items.html">Lista de items</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Lista_de_items.html">Contacto</a>
-                </li>
+                        <a class="navbar-brand" href="../Index.html">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Conocenos.html">Conocenos <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Formulario_de_creacion.html">Formulario de creación</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Lista_de_items.html">Lista de items</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Lista_de_items.html">Contacto</a>
+                                </li>
 
 
-              </ul>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </nav>
             </div>
-          </nav>
 
-        </nav>
-      </div>
+        </div>
+    </header>
+    <div class="container" style="width:60%;">
+        <h1>Registro de usuario</h1>
+        <br>
 
+        <main class="container align-items-center   ">
+            <form>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Nombre Completo</label>
+
+                    <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp" />
+                    <div id="nameAlert"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputPassword1">Numero de Telefono</label>
+                    <input maxlength="10" , minlength="10" type="text" class="form-control" id="phoneNumber" />
+                    <div id="PhoneAlert"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" />
+                    <div id="EmailWarn"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword1">Password</label>
+                    <input maxlength="10" , minlength="5" type="password" class="form-control" id="inputPassword1" />
+                    <div class="form-group">
+                        <label for="inputPassword2">Confirmar password</label>
+                        <input maxlength="10" , minlength="5" type="password" class="form-control"
+                            id="inputPassword2" />
+                        <div id="passwordAlert"></div>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>
+            </form>
     </div>
-  </header>
-  <div class="container" style="width:60%;">
-    <h1>Registro de usuario</h1>
-    <br>
+    </main>
 
-    <main class="container align-items-center   ">
-      <form>
-        <div class="form-group col-md-6">
-          <label for="exampleInputEmail1">Nombre Completo</label>
-
-          <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp" />
-          <div id="nameAlert"></div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Numero de Telefono</label>
-          <input maxlength="10" , minlength="10" type="text" class="form-control" id="phoneNumber" />
-          <div id="PhoneAlert"></div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" />
-          <div id="EmailWarn"></div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword1">Password</label>
-          <input maxlength="10" , minlength="5" type="password" class="form-control" id="inputPassword1" />
-          <div class="form-group">
-            <label for="inputPassword2">Confirmar password</label>
-            <input maxlength="10" , minlength="5" type="password" class="form-control" id="inputPassword2" />
-            <div id="passwordAlert"></div>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>
-      </form>
-  </div>
-  </main>
-
-  <script src="/js/registro.js"></script>
+    <script src="/js/registro.js"></script>
 
 </body>
 
