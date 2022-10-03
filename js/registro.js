@@ -7,11 +7,13 @@ let key = '';
 if (localStorage.key(0)) {
   for (let index = 0; index < localStorage.length; index++) {
     if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
-      cont = parseInt(localStorage.length);
-      console.log(localStorage.length + " " + cont);
+      cont++;
+
     }
 
   }
+  cont++;
+  console.log(" " + cont);
 }
 
 
@@ -35,19 +37,15 @@ class user {
 
 
 if (localStorage.key(0)) {
+  let i = 0;
   for (let index = 0; index < localStorage.length; index++) {
     if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
-      if (localStorage.length >= 0) {
-        let name = '';
-        for (let index = 0; index < localStorage.length; index++) {
-          temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
-          name = console.log(temp[index]);
-          console.log(localStorage.key(index));
-          name = new user(temp[index].Name, temp[index].Phone, temp[index].Email, temp[index].User_password);
-
-        }
-
-      }
+      let name = '';
+      temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
+      // name = console.log(temp[index]);
+      console.log(localStorage.key(index));
+      name = new user(temp[i].Name, temp[i].Phone, temp[i].Email, temp[i].User_password);
+      i++;
     }
 
   }
@@ -177,10 +175,11 @@ function ValidateEmail(usr_email) {
 
 
   if (localStorage.length >= 0) {
+    let i = 0;
     for (let index = 0; index < localStorage.length; index++) {
       if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
-        temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
-        if ((temp[index].Email) === usr_email) {
+        temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
+        if ((temp[i].Email) === usr_email) {
           console.log("el correo electronico ya esta registrada, desea iniciar sesion?")
           break;
         }
@@ -188,7 +187,7 @@ function ValidateEmail(usr_email) {
       }
     }
   }
-  var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)[.]([a-z]+)(.[a-z]+)?$/;
+  var regx = /^([a-zA-Z0-9-.-_]+)@([a-zA-Z0-9]+)[.]([a-z]+)(.[a-z]+)?$/;
   if (usr_email.match(regx)) {
 
     console.log("valid email ")
