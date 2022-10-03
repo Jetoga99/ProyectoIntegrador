@@ -1,109 +1,96 @@
+/* fuente de letra para el navegador de google fons */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* fuente de letra para partrrafos y titulos y subtitulos de google fons */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
-
-
-#header {
-    transition: ease-in-out 0.3s;
-    position: relative;
-    display: flex;
-    z-index: 997;
-    align-items: center;
-    overflow-y: auto;
+/* aqui  empieza la animacion de desvanecimiento de derecha a izquierda de toda la pagina */
+body {
+    animation-duration: 0.5s;
+    animation-name: slidein;
 }
 
-#header * {
-    transition: ease-in-out 0.3s;
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
-#header h1 {
-    font-size: 48px;
+/* aqui  empieza la animacion de desvanecimiento de derecha a izquierda de toda la pagina */
+
+/* aqui empieza el css de conocenos */
+/* aqui damos estilo al body de conocenos*/
+.bodyconocenos {
     margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
+    background: white;
+    min-width: 250px;
+    line-height: 1.5;
 }
 
-#header h1 a,
-#header h1 a:hover {
-    color: #fff;
-    line-height: 1;
+.conocenosh1 {
+    font-size: 45px;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.conocenosp {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.conocenosh2 {
+    color: black;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+.conocenosh4 {
+    color: black;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}
+
+.redesconocenos {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.redesconocenos li {
     display: inline-block;
 }
 
-#header h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 1);
+.cardconocenos {
+    text-align: justify;
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+    height: 50vw;
 }
 
-#header h2 span {
-    color: #fff;
-    border-bottom: 2px solid #183ad2;
-    padding-bottom: 6px;
+.cardconocenos:hover {
+    background: rgba(217, 218, 220, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
 }
 
-@media (max-width: 992px) {
-    #header h1 {
-        font-size: 36px;
-    }
-
-    #header h2 {
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    #header .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bg {
-        align-items: center;
-        justify-content: center;
-    }
-
-}
-
-#header.header-top {
-    height: 80px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-}
-
-#header.header-top h2 {
-    display: none;
-}
-
-#header.header-top h1 {
-    margin-right: auto;
-    font-size: 36px;
-}
-
-#header.header-top .container {
-    display: flex;
-    align-items: center;
-}
-
-#header.header-top .navbar {
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    #header.header-top {
-        height: 60px;
-    }
-
-    #header.header-top h1 {
-        font-size: 26px;
-    }
+.cardconocenos-img-top {
+    width: 100%;
+    height: 18vw;
+    object-fit: contain;
 }
 
 
+/* aqui termina el css de conocenos */
+
+
+/* aqui empieza el css de la barra de navegacion */
 .navbar {
     padding: 0;
     margin-top: 35px;
@@ -153,7 +140,6 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #e91e63;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -173,6 +159,15 @@
     color: rgb(0, 0, 0);
 }
 
+/* aqui termina el css de la barra de navegacion en pantalla de navegador*/
+
+/* aqui se agrega el sombredo del navbar al pasar el raton encima */
+nav a:hover {
+    background-color: rgb(216, 214, 214);
+    border-radius: 3px;
+}
+
+/* aqui empieza el css de la barra de navegacion en pantalla de moviles*/
 .mobile-nav-toggle {
     color: rgb(0, 0, 0);
     font-size: 28px;
@@ -243,11 +238,15 @@
     position: relative;
 }
 
+/* aqui termina el css de la barra de navegacion en pantalla de moviles*/
+
+
+/* aqui empieza el css de los botones de la barra de navegacion*/
 .navbar button {
     background: #24262b;
     border: 0;
     padding: 10px 30px;
-    color: #fff;
+    color: white;
     transition: 0.4s;
     border-radius: 4px;
     border-color: #aaaaaa;
@@ -259,6 +258,10 @@
     background: #24262b;
 }
 
+/* aqui termina el css de los botones de la barra de navegacion*/
+
+
+/* aqui empieza el css de las cards de item*/
 .card {
     text-align: justify;
     background: rgba(204, 204, 204, 0.1);
@@ -266,17 +269,21 @@
     height: 50vw;
 }
 
+
 .card-img-top {
     width: 100%;
-    height: 18vw;
+    /* ancho */
+    height: 15vw;
+    /* alto */
     object-fit: contain;
+    /* ajuste de objeto: contener */
 }
 
+/* aqui termina el css de las cards de item*/
 
-
-
+/* aqui empieza el css de footer en general*/
 .footer {
-    background-color: #24262b;
+    background-color: black;
     margin-top: 20px;
     padding: 70px 0;
 }
@@ -311,7 +318,7 @@ a {
 
 .footer-col h4 {
     font: size 18px;
-    color: #ffffff;
+    color: white;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -325,7 +332,7 @@ a {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: black;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -374,9 +381,16 @@ a {
     background-color: #ffffff;
 }
 
+/* aqui se modifica el copyright */
+address {
+    color: white;
+    position: relative;
+    top: 70px;
+    left: 0px;
+}
+
 
 /*responsive*/
-
 @media (max-width:767px) {
     .footer-col {
         width: 50%;
@@ -392,9 +406,55 @@ a {
     }
 }
 
+/* aqui empieza el css de footer en general*/
 
-main {
-    margin: 30px;
+/*aqui empieza el css de regitro*/
+.registromain {
+    padding-top: 5%;
+    padding-bottom: 5%;
+
 }
 
-/*aqui empieza cod css*/
+#btn_submit {
+    padding: 10px 0;
+    color: white;
+    outline: none;
+    background-color: black;
+    border: 1px solid rgb(62, 60, 60);
+    width: 95%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.registroh1 {
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.registroh3 {
+    font-size: small;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.divregistro {
+    font-weight: bolder;
+    text-align: left;
+    align-items: center;
+}
+
+.formregistro {
+    width: 100%;
+    margin-left: 30%;
+    margin-right: auto;
+}
+
+/*aqui termina el css de regitro*/
+
+
+/*aqui empieza el css de contacto*/
+
+/*aqui termina el css de contacto*/

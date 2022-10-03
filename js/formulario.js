@@ -2,26 +2,23 @@ let submit_btn = document.getElementById("submit_btn");
 let alerta = document.getElementById("alerta");
 let producto = document.getElementById("producto");
 let descripcion = document.getElementById("descripcion");
+let imagen = document.getElementById("imagen");
 let cont = 1;
 
 submit_btn.addEventListener("click", function (e) {
     e.preventDefault();
-    //imagen
-
-    console.log(imagen.textContent);
     console.log(producto.value, descripcion.value);
-    let servicio = { "id": 0, "name": producto.value, "img": "No imagen", "description": descripcion.value }
+    let servicio = { "id": 0, "name": producto.value, "img": $image, "description": descripcion.value }
     localStorage.setItem("info", JSON.stringify(servicio));
 
     console.log(servicio);
     alerta.classList.remove("alert-danger");
     alerta.classList.add("alert-success")
-    alerta.innerText = "Servivio agregado";
+    alerta.innerText = "Servicio agregado";
     alerta.style.display = "block";
     setTimeout(() => {
         alerta.style.display = "none";
     }, 5000);
-
 });
 producto.addEventListener("blur", validar);
 descripcion.addEventListener("blur", validar);
@@ -34,7 +31,7 @@ function validar(e) {
         campo.focus();
         alerta.classList.remove("alert-success");
         alerta.classList.add("alert-danger")
-        alerta.innerText = "Dato no valido";
+        alerta.innerText = "Dato no válido";
         alerta.style.display = "block";
         setTimeout(() => {
             alerta.style.display = "none";
@@ -45,12 +42,28 @@ function validar(e) {
     }
 
 };
-document.querySelector("#archivo").addEventListener("load",function () {
-    const reader = new FileReader();
+document.addEventListener("DOMContentLoaded", () => {
+    const recentImageDataUrl = localStorage.getItem("recent-image");
+    if (recentImageDataUrl) {
+        console.log("yes I'm here")
 
-    reader.addEventListener("load", ()=>{
-        localStorage.setItem("recent-image", reader.result);
-        console.log("yes I'm here");
-        });
-        reader.readAsDataURL(this.files[0]);
-    });
+        document.querySelector("#imagen").setAttribute("src", recentImageDataUrl);
+    }
+});
+
+
+const $form = document.querySelector('#form')
+
+const $image = document.querySelector('#image')
+const $file = document.querySelector('#file')
+function renderImage(formData) {
+    const file = formData.get('image')
+    const image = URL.createObjectURL(file)
+    $image.setAttribute('src', image)
+}
+
+
+$file.addEventListener('change', (event) => {
+    const formData = new FormData($form)
+    renderImage(formData)
+})
