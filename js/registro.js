@@ -3,10 +3,14 @@ var Email_Warning = document.getElementById("EmailWarn");
 let temp = [];
 let cont = 0;
 let key = '';
+
 if (localStorage.key(0)) {
   for (let index = 0; index < localStorage.length; index++) {
-    cont = parseInt(localStorage.length);
-    console.log(localStorage.length + " " + cont);
+    if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+      cont = parseInt(localStorage.length);
+      console.log(localStorage.length + " " + cont);
+    }
+
   }
 }
 
@@ -29,17 +33,28 @@ class user {
 
 }
 
-if (localStorage.length >= 0) {
-  let name = '';
+
+if (localStorage.key(0)) {
   for (let index = 0; index < localStorage.length; index++) {
-    temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
-    name = console.log(temp[index]);
-    console.log(localStorage.key(index));
-    name = new user(temp[index].Name, temp[index].Phone, temp[index].Email, temp[index].User_password);
+    if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+      if (localStorage.length >= 0) {
+        let name = '';
+        for (let index = 0; index < localStorage.length; index++) {
+          temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
+          name = console.log(temp[index]);
+          console.log(localStorage.key(index));
+          name = new user(temp[index].Name, temp[index].Phone, temp[index].Email, temp[index].User_password);
+
+        }
+
+      }
+    }
 
   }
-
 }
+
+
+
 btn.addEventListener("click", function (e) {
   e.preventDefault();
   let password1 = document.getElementById("inputPassword1").value;
@@ -160,15 +175,17 @@ btn.addEventListener("click", function (e) {
 
 function ValidateEmail(usr_email) {
 
+
   if (localStorage.length >= 0) {
-
     for (let index = 0; index < localStorage.length; index++) {
-      temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
-      if ((temp[index].Email) === usr_email) {
-        console.log("el correo electronico ya esta registrada, desea iniciar sesion?")
-        break;
-      }
+      if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+        temp[index] = JSON.parse(localStorage.getItem(localStorage.key(index)));
+        if ((temp[index].Email) === usr_email) {
+          console.log("el correo electronico ya esta registrada, desea iniciar sesion?")
+          break;
+        }
 
+      }
     }
   }
   var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+)[.]([a-z]+)(.[a-z]+)?$/;
