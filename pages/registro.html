@@ -24,47 +24,47 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
+<body class="bodyregistro">
     <header>
         <div class="container" id="nav"></div>
     </header>
-    <main class="container">
-        <h1>Crea Tu Cuenta</h1>
-        <h3>Registrate</h3>
-        <form>
-            <div class="form-group col-md-5">
+    <main class="container registromain">
+        <h1 class="registroh1">Crea Tu Cuenta</h1>
+        <h3 class="registroh3">Registrate</h3>
+        <form class="formregistro">
+            <div class="form-group col-md-5 divregistro">
                 <label for="exampleInputEmail1"><i class="fa-solid fa-user"></i> Nombre Completo</label>
 
                 <input placeholder="Ingresa tu nombre y apellido" type="email" class="form-control" id="inputName"
                     aria-describedby="emailHelp" />
                 <div id="nameAlert"></div>
             </div>
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-5 divregistro">
                 <label for="exampleInputPassword1"><i class="fa-solid fa-phone"></i> Número de teléfono</label>
                 <input placeholder="Número a 10 dígitos" maxlength="10" , minlength="10" type="text"
                     class="form-control" id="phoneNumber" />
                 <div id="PhoneAlert"></div>
             </div>
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-5 divregistro">
                 <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Dirección de correo
                     electrónico</label>
                 <input placeholder="Dirección de correo electrónico " type="email" class="form-control" id="inputEmail"
                     aria-describedby="emailHelp" />
                 <div id="EmailWarn"></div>
             </div>
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-5 divregistro">
                 <label for="inputPassword1"><i class="fa-solid fa-lock"></i> Contraseña
                 </label>
                 <input placeholder="crea una contraseña" maxlength="10" , minlength="5" type="password"
                     class="form-control" id="inputPassword1" />
-                <div class="form-group">
+                <div class="form-group divregistro">
                     <label for="inputPassword2"><i class="fa-solid fa-lock"></i> Confirmar Contraseña</label>
                     <input placeholder="Confirma la Contraseña" maxlength="10" , minlength="5" type="password"
                         class="form-control" id="inputPassword2" />
-                    <div id="passwordAlert"></div>
+                    <div class="divregistro" id="passwordAlert"></div>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center btn divregistro">
                     <button id="btn_submit" type="submit">Crear Cuenta</button>
                 </div>
 

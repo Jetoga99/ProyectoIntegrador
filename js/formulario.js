@@ -14,7 +14,7 @@ submit_btn.addEventListener("click", function (e) {
     console.log(servicio);
     alerta.classList.remove("alert-danger");
     alerta.classList.add("alert-success")
-    alerta.innerText = "Servivio agregado";
+    alerta.innerText = "Servicio agregado";
     alerta.style.display = "block";
     setTimeout(() => {
         alerta.style.display = "none";
@@ -31,7 +31,7 @@ function validar(e) {
         campo.focus();
         alerta.classList.remove("alert-success");
         alerta.classList.add("alert-danger")
-        alerta.innerText = "Dato no valido";
+        alerta.innerText = "Dato no válido";
         alerta.style.display = "block";
         setTimeout(() => {
             alerta.style.display = "none";
@@ -57,13 +57,13 @@ const $form = document.querySelector('#form')
 const $image = document.querySelector('#image')
 const $file = document.querySelector('#file')
 function renderImage(formData) {
-  const file = formData.get('image')
-  const image = URL.createObjectURL(file)
-  $image.setAttribute('src', image)
+    const file = formData.get('image')
+    const image = URL.createObjectURL(file)
+    $image.setAttribute('src', image)
 }
 
 
 $file.addEventListener('change', (event) => {
-  const formData = new FormData($form)
-  renderImage(formData)
+    const formData = new FormData($form)
+    renderImage(formData)
 })

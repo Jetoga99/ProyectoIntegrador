@@ -1,71 +1,59 @@
 
 let navbar1 = document.getElementById("nav");
-let footer1=document.getElementsByTagName("footer")[0];
+let footer1 = document.getElementsByTagName("footer")[0];
 window.addEventListener("load", function (e) {
   navbar1.innerHTML = `
     <nav id="navbar" class="navbar" style="justify-content: center;">
 
-  <ul>
-    <li><a href="#">
-        <img src="../src/Logo.png" width="80" class=alt="">
-      </a></li>
-    <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
-    <li><a class="nav-link" href="../pages/Conocenos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
-    <li><a class="nav-link" href="../pages/Lista_de_items.html">Servicios</a></li>
-    <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
-    <li><button type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;"> Registarse
-            </button></li>
-          <li><button type=" button" class="btn btn-dark"
-              style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;"> Iniciar
-              Sesión </button></li>
-        </ul>
+    <ul>
+     <li><a href="#">
+     <img src="../src/Logo.png" width="80" class=alt="">
+     </a></li>
+     <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
+     <li><a class="nav-link" href="../pages/conocenos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
+     <li><a class="nav-link" href="../pages/lista_de_items.html">Servicios</a></li>
+     <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+     <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;"> Regístrate
+     </button></li>
+     <li><button type=" button" class="btn btn-dark"
+     style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" > Iniciar
+     Sesión </button></li>
+     </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
 
 
 </nav>`;
 
+  // se uso el codigo onclick="window.location.href='../pages/registro.html'" para linkear la pagina registro al boton de registro
 
-  footer1.innerHTML=`<div class="container">
+
+  footer1.innerHTML = `<div class="container">
   <div class="row">
     <div class="footer-col">
       <h4>Compañia </h4>
       <ul>
-        <li><a href="#">Acerca de nosotros</a></li>
-        <li><a href="#">Nuestros Servicios</a></li>
-        <li><a href="#">Politicas de Privacidad</a></li>
-        <li><a href="#">Subsiscribete</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Ayuda</h4>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Estado de solicitud</a></li>
-        <li><a href="#">Feedback</a></li>
-        <li><a href="#">Opciones de pago</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4></h4>
-      <ul>
-        <li><a href=""></a></li>
+        <li><a href="../pages/conocenos.html">Acerca de nosotros</a></li>
+        <li><a href="../pages/lista_de_items.html">Nuestros Servicios</a></li>
+        <li><a href="../pages/contacto.html">Contáctanos</a></li>
+        <li><a href="../pages/registro.html">Regístrate</a></li>
+        <li><a href="#">Iniciar Sesión</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Siguenos</h4>
       <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100086169017722&sk=about_details"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://twitter.com/Brucewa00550347"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/tiknife/"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
+    <address>&copy; 2022 IT Knife Web Service. Todos los derechos reservados.</address>
   </div>
 </div>`
 });
 
-window.onload=function navbarfunction() {
+window.onload = function navbarfunction() {
   "use strict";
   const select = (el, all = false) => {
     el = el.trim()
