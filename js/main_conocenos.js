@@ -1,4 +1,4 @@
-/* let navbar = document.getElementById("nav");
+let navbar = document.getElementById("nav");
 window.addEventListener("load", function (e) {
   navbar.innerHTML = `<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- aqui insertamos la barra de navegacion de mi portafolio -->
@@ -36,4 +36,4 @@ window.addEventListener("load", function (e) {
     </ol>
 </nav>
     `;
-}); */
+});
