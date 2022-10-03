@@ -30,7 +30,7 @@ window.addEventListener("load", function (e) {
   footer1.innerHTML = `<div class="container">
   <div class="row">
     <div class="footer-col">
-      <h4>Compañia </h4>
+      <h4 class = "compfoter">Compañia </h4>
       <ul>
         <li><a href="../pages/conocenos.html">Acerca de nosotros</a></li>
         <li><a href="../pages/lista_de_items.html">Nuestros Servicios</a></li>
@@ -40,7 +40,7 @@ window.addEventListener("load", function (e) {
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Siguenos</h4>
+      <h4 class = "sigfoter">Siguenos</h4>
       <div class="social-links">
         <a target="_blank" href="https://www.facebook.com/profile.php?id=100086169017722&sk=about_details"><i class="fab fa-facebook-f"></i></a>
         <a target="_blank" href="https://twitter.com/Brucewa00550347"><i class="fab fa-twitter"></i></a>
