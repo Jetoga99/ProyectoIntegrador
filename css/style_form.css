@@ -62,6 +62,14 @@ label {
 
 }
 
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 14px;
+
+}
 
 .footer {
     background-color: #24262b;
