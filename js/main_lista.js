@@ -14,7 +14,7 @@ const getData = () => {
       console.log(typeof (data));
       data.forEach(producto => {
         /* console.log(producto.id,producto.title) */
-        mainProds.innerHTML += `<div  card" style="width: 18rem;">
+        mainProds.innerHTML += `<div  card" style="width: 18rem;hover:">
         <img class="card-img-top" src="${producto.img}" alt="${producto.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${producto.name}</h5>
