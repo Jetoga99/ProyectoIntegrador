@@ -33,7 +33,7 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
         document.getElementById("Nombre").style.borderColor = "#FF0000";
         usr_name = "";
         document.getElementById("Nombre").value = usr_name;
-        setTimeout(() => { }, (10 * 1000)); //me quede aqui mucho ojo
+
     } else {
 
         document.getElementById("Nombre").style.borderColor = "";

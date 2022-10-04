@@ -2,7 +2,7 @@ var btn = document.getElementById("btn_submit");
 var Email_Warning = document.getElementById("EmailWarn");
 let temp = [];
 let cont = 0;
-let key = '';
+
 
 if (localStorage.key(0)) {
   for (let index = 0; index < localStorage.length; index++) {
@@ -71,7 +71,7 @@ btn.addEventListener("click", function (e) {
   </div>`;
     console.log(document.getElementById("inputName").style.borderColor);
     document.getElementById("inputName").style.borderColor = "#FF0000";
-    setTimeout(() => { }, (10 * 1000)); //me quede aqui mucho ojo
+
   }//fin de if validación de nombre 
 
   // Código de valores por default por el evento change 
@@ -124,7 +124,7 @@ btn.addEventListener("click", function (e) {
   if (!ValidatePasswords(password1, password2)) {
     document.getElementById("passwordAlert").style.display = "block";
     document.getElementById("passwordAlert").innerHTML = `<div class="alert alert-danger" role="alert">
-    Las contraseñas deben coincidir y debe contener al menos 8 caracteres alfanumérico
+    Las contraseñas deben coincidir y debe contener al menos 8 caracteres alfanumérico, sin espacios.
   </div>`;
     document.getElementById("inputPassword1").style.borderColor = "#FF0000";
     document.getElementById("inputPassword2").style.borderColor = "#FF0000";
@@ -145,9 +145,10 @@ btn.addEventListener("click", function (e) {
 
   if (((ValidateName(FullName))) && ((ValidateNumber(phoneNumber))) && ((ValidateEmail(Email))) && ((ValidatePasswords(password1, password2)))) {
     console.log("se ha creado una clase con nombre : " + FullName);
-    key = FullName.split(' ');
-
-    localStorage.setItem(key[0], JSON.stringify(key[0] = new user(FullName, phoneNumber, Email, password1)));
+    let key = cont.toString();
+    console.log(key);
+    localStorage.setItem(key, JSON.stringify(key = new user(FullName, phoneNumber, Email, password1)));
+    key = '';
     cont++;
     Swal.fire({
       position: 'center',
@@ -202,7 +203,7 @@ function ValidateEmail(usr_email) {
 }
 
 function ValidateName(name) {
-  let regx = /^([a-zA-Z ]+)([a-zA-Z ])?$/;
+  let regx = /^([a-zA-Z]+)([a-zA-Z ]+)([a-zA-Z])?$/;
   if ((name.match(regx)) && (name.length >= 3)) {
     console.log("valid name")
     return true;
