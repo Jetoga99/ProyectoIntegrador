@@ -13,10 +13,10 @@ window.addEventListener("load", function (e) {
      <li><a class="nav-link" href="../pages/quienessomos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
      <li><a class="nav-link" href="../pages/servicios.html">Servicios</a></li>
      <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
-     <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;"> Regístrate
+     <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;" id="registrate"> Regístrate
      </button></li>
      <li><button onclick="window.location.href='../pages/iniciarsesion.html'" type=" button" class="btn btn-dark"
-     style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" > Iniciar
+     style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" id="iniciar"> Iniciar
      Sesión </button></li>
      </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

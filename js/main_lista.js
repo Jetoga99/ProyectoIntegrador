@@ -20,7 +20,7 @@ const getData = () => {
           <h5 class="card-title">${producto.name}</h5>
           <p class="card-text">${producto.description.slice(0, 30)}...</p>
         
-      <button type="button" class="btn btn-primary mt-auto" data-toggle="modal" data-target="#modal_${producto.id}">
+      <button type="button" class="btn btn-dark mt-auto" data-toggle="modal" data-target="#modal_${producto.id}">
       Ver más
     </button>
     
