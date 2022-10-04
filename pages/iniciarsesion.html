@@ -28,28 +28,31 @@
     <header>
         <div class="container" id="nav"></div>
     </header>
-    <div class="container registromain">
+    <div class="container ">
         <h1 class="registroh1">Iniciar Sesión</h1>
         <h3 class="registroh3">Entrar para iniciar</h3>
-        <form class="formregistro">
-            <div class="form-group col-md-5 divregistro">
+        <form class="offset-lg-3">
+
+            <div class="form-group col-md-8 divregistro">
                 <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Dirección de correo
                     electrónico</label>
                 <input placeholder="Dirección de correo electrónico " type="email" class="form-control" id="inputEmail"
                     aria-describedby="emailHelp" />
                 <div id="EmailWarn"></div>
             </div>
-            <div class="form-group col-md-5 divregistro">
+            <div class="form-group col-md-8 divregistro">
                 <label for="inputPassword1"><i class="fa-solid fa-lock"></i> Contraseña
                 </label>
                 <input placeholder="Contraseña" maxlength="10" , minlength="5" type="password" class="form-control"
                     id="inputPassword1" />
+                <div class="divregistro" id="passwordAlert"></div>
 
-                <div class="text-center btn divregistro">
+                <div class="text-center btn divregistro" style="width: 100%;display: block;">
                     <button id="btn_submit" type="submit">Iniciar Sesión</button>
                 </div>
 
             </div>
+
         </form>
 
     </div>
