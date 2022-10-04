@@ -1,3 +1,5 @@
+
+
 var btn = document.getElementById("btn_submit");
 
 
@@ -15,7 +17,12 @@ btn.addEventListener("click", function (e) {
         }
 
         if ((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) == passwords.includes(pw))) {
-            console.log("Success")
+            is = document.getElementById("iniciar");
+            reg = document.getElementById("registrate");
+            console.log("here")
+            is.style.display = "none"
+            reg.style.display = "none";
+
         }
 
 
@@ -43,7 +50,7 @@ function ValidatePassword(valor) {
 
 
 
-    if ((valor.match(regx)) && (valor.length > 0)) {
+    if ((valor.match(regx))) {
         return true;
 
     } else {
