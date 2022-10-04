@@ -15,7 +15,7 @@ window.addEventListener("load", function (e) {
      <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
      <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;"> Regístrate
      </button></li>
-     <li><button type=" button" class="btn btn-dark"
+     <li><button onclick="window.location.href='../pages/iniciarsesion.html'" type=" button" class="btn btn-dark"
      style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" > Iniciar
      Sesión </button></li>
      </ul>
