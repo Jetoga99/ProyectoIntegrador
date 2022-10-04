@@ -33,7 +33,7 @@
         "id": 6,
         "name": "Asesoría Técnica",
         "img": "../src/asesortec.jpg",
-        "description": "Servicio de elavoración de informes, tareas o propuestas de nivel superior."
+        "description": "Brindamos atención y soporte especializada al cliente, siempre dispuestos a resolver cualquier problema en la menor cantidad de tiempo requerido. Dándole valor a la empresa y a que los servicios siempre estén disponibles en la mayor cantidad de tiempo posible. Siempre pensando primero en los requerimientos de la empresa para dar el mejor soporte posible."
     },
     {
         "id": 7,
@@ -45,18 +45,18 @@
         "id": 8,
         "name": "Diseño UX/UI",
         "img": "../src/disux.jpg",
-        "description": "Servicio de creación de interfaces centradas en el usuario."
+        "description": "Se necesita estar a la vanguardia y estar un paso delante de la competencia, es por eso por lo que ofrecemos el servicio de implementación de interfaces UX y UI en páginas web para estar un paso delante de la competencia y que la página web tenga visibilidad. Al igual de fomentar una plataforma de e- commerce completa."
     },
     {
         "id": 9,
         "name": "Cotización de Proyectos",
         "img": "../src/cotproy.jpg",
-        "description": "Servicio de creación de proyectos personalizados a tu presupuesto."
+        "description": "Cotizamos proyectos pequeños, medianos y a gran escala. Teniendo en cuenta las necesidades del cliente, presupuesto y tiempo. Siempre pensando en la mejora continua de este para que, al finalizar el proyecto, siempre se cuente con la habilidad de implementar nuevas funciones cuando el cliente lo requiera."
     },
     {
         "id": 10,
         "name": "Diseño Gráfico",
         "img": "../src/disgra.jpg",
-        "description": "Servicio de diseño de carteles, infografía, flyers, simbología, señalética y folletos."
+        "description": "Diseñamos marketing siempre pensando en los valores y la misión de la empresa y que estos sean reflejados de una manera concisa y correcta hacia los clientes. Desde logos, flyers, slogans, diseños variados."
     }
 ]
