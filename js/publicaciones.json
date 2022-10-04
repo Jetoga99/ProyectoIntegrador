@@ -33,19 +33,19 @@
         "id": 6,
         "name": "Asesoría Técnica",
         "img": "../src/asesortec.jpg",
-        "description": "Brindamos atención y soporte especializada al cliente, siempre dispuestos a resolver cualquier problema en la menor cantidad de tiempo requerido. Dándole valor a la empresa y a que los servicios siempre estén disponibles en la mayor cantidad de tiempo posible. Siempre pensando primero en los requerimientos de la empresa para dar el mejor soporte posible."
+        "description": "En IT KNIFE brindamos atención y soporte especializada al cliente y a sus necesidades técnicas, siempre dispuestos a resolver cualquier problema en la menor cantidad de tiempo requerido, contamos con colaboradores altamente especializados y con experiencias en el área técnica."
     },
     {
         "id": 7,
         "name": "Creación de Sistemas de Cómputo",
         "img": "../src/creasis.jpg",
-        "description": "Servicio de creación de productos digitales eficientes y seguros."
+        "description": "En IT KNIFE tenemos ingenieros especializados en hardware y software que tienen conocimiento en diseños de dispositivos de entrada, salida y son muy capaces de crear nuevos sistemas de cómputo, confía en nosotros. Nos enfocamos en brindar la mejor experiencia de usuario, transmitiendo tus necesidades y gustos requeridos."
     },
     {
         "id": 8,
         "name": "Diseño UX/UI",
         "img": "../src/disux.jpg",
-        "description": "Se necesita estar a la vanguardia y estar un paso delante de la competencia, es por eso por lo que ofrecemos el servicio de implementación de interfaces UX y UI en páginas web para estar un paso delante de la competencia y que la página web tenga visibilidad. Al igual de fomentar una plataforma de e- commerce completa."
+        "description": "IT KNIFE tiene personas especializadas en el diseño de planificar y optimizar tanto la interfaz, la parte visual, como la experiencia la parte racional de un producto o servicio, trabajando arduamente en el resultado final de lo que se visualiza."
     },
     {
         "id": 9,
@@ -57,6 +57,6 @@
         "id": 10,
         "name": "Diseño Gráfico",
         "img": "../src/disgra.jpg",
-        "description": "Diseñamos marketing siempre pensando en los valores y la misión de la empresa y que estos sean reflejados de una manera concisa y correcta hacia los clientes. Desde logos, flyers, slogans, diseños variados."
+        "description": "IT KNIFE cuenta con diseñadores marketing que siempre verán para sacar mayor provecho hacia tus publicaciones y que estos sean reflejados de una manera concisa además de una manera correcta para atraer a sus clientes. Desde logos, flyers, slogans, diseños variados."
     }
 ]
