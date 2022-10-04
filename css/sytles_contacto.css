@@ -3,13 +3,21 @@
 /* fuente de letra para partrrafos y titulos y subtitulos de google fons */
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
+html {
+    height: 100%;
+}
+
 body {
     line-height: 1.5;
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
+    grid-auto-flow: column;
+    min-height: 100%;
+
+
+
 }
 
 #header {
@@ -103,7 +111,7 @@ body {
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #header.header-top {
         height: 60px;
     }
@@ -273,18 +281,20 @@ nav a:hover {
 
 .hero {
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     display: flex;
-    flex-wrap: wrap;
+    grid-gap: 5em;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10em;
+    margin-bottom: auto;
 
 }
 
 form {
-    width: 50%;
-    height: 50%;
+    max-width: 100%;
+    height: 70%;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .input-group {
@@ -292,8 +302,7 @@ form {
     position: relative;
 }
 
-input,
-textarea {
+input {
     width: 100%;
     padding: 10px;
     outline: 0;
@@ -301,7 +310,25 @@ textarea {
     background: transparent;
     font-size: 15px;
     border-radius: 15px;
+    max-width: auto;
+    min-height: auto;
+    max-height: max-content;
+    min-width: 150px;
 }
+
+textarea {
+    width: auto;
+    padding: 8%;
+    outline: 0;
+    border: 3px solid rgb(0, 0, 0);
+    background: transparent;
+    font-size: 15px;
+    border-radius: 15px;
+    max-width: max-content;
+    min-height: max-content;
+    max-height: auto;
+}
+
 
 label {
     height: 100%;
@@ -324,6 +351,7 @@ label {
     width: 50%;
     cursor: pointer;
     border-radius: 15px;
+    min-width: max-content;
 
 
 }
@@ -368,13 +396,12 @@ textarea:valid~label {
 
 .footer {
     background-color: #24262b;
-    margin-top: 20px;
+    margin: auto;
     padding: 70px 0;
 }
 
 .footer .container {
     max-width: 1170px;
-
     margin: auto;
 }
 
@@ -474,9 +501,17 @@ address {
         padding: 0 15px;
         margin-bottom: 30px;
     }
+
+
+    .footer {
+        margin-top: auto;
+
+
+
+    }
 }
 
-@media (max-width:574px) {
+@media (max-width:1574px) {
     .footer-col {
         width: 100%;
 
@@ -485,7 +520,7 @@ address {
 
 
 main {
-    margin: 30px;
+    min-width: 100px;
 }
 
 
