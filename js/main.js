@@ -7,7 +7,7 @@ window.addEventListener("load", function (e) {
 
     <ul>
      <li><a href="#">
-     <img src="../src/Logo.png" width="80" class=alt="">
+     <img src="../src/Logo.png" width="120" class=alt="">
      </a></li>
      <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
      <li><a class="nav-link" href="../pages/quienessomos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
