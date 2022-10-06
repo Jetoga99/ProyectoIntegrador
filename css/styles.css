@@ -28,15 +28,19 @@
 
 
 /* aqui empieza el css de conocenos */
+body {
+    background: rgba(217, 218, 220, 0.7);
+}
+
 /* aqui damos estilo al body de conocenos*/
 .bodyconocenos {
     margin: 0;
-    background: white;
+    background: rgba(217, 218, 220, 0.7);
 }
 
 .conocenosh1 {
     font-size: 45px;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: auto;
 }
@@ -48,14 +52,14 @@
 
 .conocenosh2 {
     color: black;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
-    font-size: 35px;
+    font-size: 28px;
 }
 
 .conocenosh4 {
     color: black;
-    font-family: 'Overpass', sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
 }
 
@@ -78,7 +82,7 @@
 
 .cardconocenos:hover {
     background: rgba(217, 218, 220, 0.7);
-    border-radius: 10px;
+    border-radius: 35px;
     box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
 }
 
@@ -98,6 +102,8 @@
 .navbar {
     padding: 0;
     margin-top: 35px;
+
+
 }
 
 .navbar ul {
