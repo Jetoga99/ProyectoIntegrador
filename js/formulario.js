@@ -21,6 +21,11 @@ submit_btn.addEventListener("click", function (e) {
                 alerta.innerText = "Servicio agregado";
                 alerta.classList.remove("alert-danger");
                 alerta.classList.add("alert-success");
+                producto.value = " "
+                descripcion.value = ""
+                imagen.value = null
+                const $image = document.querySelector('#image');
+                $image.setAttribute('src', " ");
             } else {
                 alerta.innerText = "Error - No hay imagen"
             }//else imagen
@@ -41,6 +46,7 @@ submit_btn.addEventListener("click", function (e) {
 
 //alidacion de inputs | Verificando que no esten vacios y que tengan al menos 5 letras
 function validar(campo) {
+    var regex = /^\s+/
     if (campo.value.length == 0 || campo.value.length < 5) {
         //Si el input es erroneo mandando el foco al input
         campo.focus();
@@ -48,10 +54,17 @@ function validar(campo) {
         alerta.classList.add("alert-danger");
         return false;
     } else {
-        return true;
-    }
+        if (campo.value.match(regex)) {
+            //Si el input es erroneo mandando el foco al input
+            campo.focus();
+            //Agregando clase danger a la alerta
+            alerta.classList.add("alert-danger");
+        } else {
+            return true;
+        }
 
-};
+    };
+}
 
 
 //Imagen agregada a localStorage
