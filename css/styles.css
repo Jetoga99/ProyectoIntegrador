@@ -32,68 +32,7 @@ body {
     background: rgba(217, 218, 220, 0.7);
 }
 
-/* aqui damos estilo al body de conocenos*/
-.bodyconocenos {
-    margin: 0;
-    background: rgba(217, 218, 220, 0.7);
-}
 
-.conocenosh1 {
-    font-size: 45px;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    margin: auto;
-}
-
-.conocenosp {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: justify;
-}
-
-.conocenosh2 {
-    color: black;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    font-size: 28px;
-}
-
-.conocenosh4 {
-    color: black;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-}
-
-.redesconocenos {
-    text-align: right;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.redesconocenos li {
-    display: inline-block;
-}
-
-.cardconocenos {
-    text-align: justify;
-    background-color: white;
-    transition: all ease-in-out 0.3s;
-    height: 50vw;
-}
-
-.cardconocenos:hover {
-    background: rgba(217, 218, 220, 0.7);
-    border-radius: 35px;
-    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
-}
-
-.cardconocenos-img-top {
-    width: 100%;
-    height: 18vw;
-    object-fit: contain;
-}
-
-
-/* aqui termina el css de conocenos */
 
 
 
@@ -196,7 +135,7 @@ nav a:hover {
     top: 15px;
 }
 
-
+/* responsive del nav */
 @media (max-width: 991px) {
     .mobile-nav-toggle {
         display: block;
@@ -261,19 +200,55 @@ nav a:hover {
 
 /* aqui empieza el css de los botones de la barra de navegacion*/
 .navbar button {
+    display: inline-flex;
     background: #24262b;
-    border: 0;
+    border: none;
+    cursor: pointer;
     padding: 10px 30px;
     color: white;
+    /*     text-shadow: 0 1px 5px black; */
     transition: 0.4s;
-    border-radius: 4px;
+    border-radius: 3px;
     border-color: #aaaaaa;
     border-width: 1px;
     border-style: solid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar button span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
 }
 
 .navbar button:hover {
-    background: #24262b;
+    background: white;
+    border: 1px solid transparent;
+    color: black;
+}
+
+.navbar button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #c9c9c9;
+    position: absolute;
+    z-index: 1;
+    top: -45px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+
+.navbar button:hover::after {
+    top: 0;
+    color: black;
 }
 
 /* aqui termina el css de los botones de la barra de navegacion*/
@@ -436,7 +411,7 @@ address {
 
 
 
-/*responsive*/
+/*responsive del footer*/
 @media (max-width:767px) {
     .footer-col {
         width: 50%;
@@ -451,6 +426,11 @@ address {
 
     }
 }
+
+/* responsive de la pagina */
+
+
+
 
 
 
@@ -472,6 +452,15 @@ address {
     border-radius: 5px;
     font-weight: bolder;
     font-size: large;
+    transition: .3s ease all;
+}
+
+#btn_submit:hover {
+    background: white;
+    border: 1px solid transparent;
+    color: black;
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    transition: .3s ease-in-out all;
 }
 
 .registroh1 {
@@ -501,8 +490,88 @@ address {
 
 
 
+
 /*aqui termina el css de regitro*/
 
+
+
+/* aqui damos estilo al body de conocenos*/
+.bodyconocenos {
+    margin: 0;
+    background: rgba(217, 218, 220, 0.7);
+
+}
+
+.conocenosh1 {
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.conocenosp {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.conocenosh2 {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 28px;
+}
+
+.conocenosh4 {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.redesconocenos {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.redesconocenos li {
+    display: inline-block;
+}
+
+.cardconocenos {
+    text-align: justify;
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+    height: 40vw;
+}
+
+.cardconocenos:hover {
+    background: rgba(217, 218, 220, 0.7);
+    border-radius: 35px;
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+}
+
+.cardconocenos-img-top {
+    width: 100%;
+    height: 18vw;
+    object-fit: contain;
+}
+
+/* .formulario {
+    margin-top: 2em;
+    padding: 3em;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255, 0.30);
+
+}
+ */
+/* .seccion {
+    padding-top: 50px;
+    min-width: 320px;
+
+} */
+
+/* aqui termina el css de conocenos */
 
 /*aqui empieza el css de contacto*/
 

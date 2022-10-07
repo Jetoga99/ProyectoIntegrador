@@ -38,6 +38,7 @@ const getData = () => {
           ${producto.description}
           </div>
           <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.href='../pages/cotiza.html'">Cotiza</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           </div>
         </div>
