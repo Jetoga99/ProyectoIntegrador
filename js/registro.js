@@ -2,17 +2,17 @@ var btn = document.getElementById("btn_submit");
 var Email_Warning = document.getElementById("EmailWarn");
 let temp = [];
 let cont = 0;
-
+var flag = true;
 
 if (localStorage.key(0)) {
   for (let index = 0; index < localStorage.length; index++) {
-    if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+    if (!(isNaN((parseInt(localStorage.key(index)))))) {
+      console.log("hola aqui ando: " + parseInt(localStorage.key(index)));
       cont++;
 
     }
 
   }
-  cont++;
   console.log(" " + cont);
 }
 
@@ -39,11 +39,11 @@ class user {
 if (localStorage.key(0)) {
   let i = 0;
   for (let index = 0; index < localStorage.length; index++) {
-    if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+    if (!(isNaN((parseInt(localStorage.key(index)))))) {
       let name = '';
       temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
       // name = console.log(temp[index]);
-      console.log(localStorage.key(index));
+      console.log("hola aqui ando: " + parseInt(localStorage.key(index)));
       name = new user(temp[i].Name, temp[i].Phone, temp[i].Email, temp[i].User_password);
       i++;
     }
@@ -143,7 +143,7 @@ btn.addEventListener("click", function (e) {
 
   })
 
-  if (((ValidateName(FullName))) && ((ValidateNumber(phoneNumber))) && ((ValidateEmail(Email))) && ((ValidatePasswords(password1, password2)))) {
+  if (((ValidateName(FullName))) && ((ValidateNumber(phoneNumber))) && ((ValidateEmail(Email))) && ((ValidatePasswords(password1, password2))) && (flag)) {//valida que toda las condiciones han sido respetadas y procede a cargar el archivo json
     console.log("se ha creado una clase con nombre : " + FullName);
     let key = cont.toString();
     console.log(key);
@@ -157,6 +157,7 @@ btn.addEventListener("click", function (e) {
       showConfirmButton: false,
       timer: 1500
     })
+
     document.getElementById("inputEmail").value = "";
     document.getElementById("inputName").value = "";
     document.getElementById("phoneNumber").value = "";
@@ -174,14 +175,30 @@ btn.addEventListener("click", function (e) {
 
 function ValidateEmail(usr_email) {
 
-
+  flag = true;
   if (localStorage.length >= 0) {
     let i = 0;
     for (let index = 0; index < localStorage.length; index++) {
-      if ((localStorage.key(index) != "info") && (localStorage.key(index) != "recent-image")) {
+      if (!(isNaN((parseInt(localStorage.key(index)))))) {
         temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
         if ((temp[i].Email) === usr_email) {
-          console.log("el correo electronico ya esta registrada, desea iniciar sesion?")
+          console.log("el correo electronico ya esta registrada, desea iniciar sesion?");
+          Swal.fire({
+            title: 'El correo ingresado ya existe, ¿desea iniciar sesión?',
+            icon: 'question',
+            iconHtml: '¿?',
+            confirmButtonText: `<a href="/pages/iniciarsesion.html">Iniciar sesión </a>`,
+            cancelButtonText: 'Cancelar',
+            showCancelButton: true,
+            showCloseButton: true,
+            isClicked: false,
+            focusConfirm: true
+          })
+
+
+
+          flag = false;
+
           break;
         }
 
@@ -203,7 +220,7 @@ function ValidateEmail(usr_email) {
 }
 
 function ValidateName(name) {
-  let regx = /^([a-zA-Z]+)([a-zA-Z ]+)([a-zA-Z])?$/;
+  let regx = /^([a-zA-Z\_.é]+)([a-zA-Zá-ú ]+)([a-zA-Zá-ú ])?$/;
   if ((name.match(regx)) && (name.length >= 3)) {
     console.log("valid name")
     return true;
