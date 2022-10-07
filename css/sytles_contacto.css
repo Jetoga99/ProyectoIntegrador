@@ -314,6 +314,7 @@ input {
     min-height: auto;
     max-height: max-content;
     min-width: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 textarea {

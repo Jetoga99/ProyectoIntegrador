@@ -7,16 +7,16 @@ window.addEventListener("load", function (e) {
 
     <ul>
      <li><a href="#">
-     <img src="../src/Logo.png" width="80" class=alt="">
+     <img src="../src/Logo.png" width="120" class=alt="">
      </a></li>
      <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
-     <li><a class="nav-link" href="../pages/conocenos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
-     <li><a class="nav-link" href="../pages/lista_de_items.html">Servicios</a></li>
+     <li><a class="nav-link" href="../pages/quienessomos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
+     <li><a class="nav-link" href="../pages/servicios.html">Servicios</a></li>
      <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
-     <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;"> Regístrate
+     <li><button onclick="window.location.href='../pages/registro.html'" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;" id="registrate"> Regístrate
      </button></li>
-     <li><button type=" button" class="btn btn-dark"
-     style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" > Iniciar
+     <li><button onclick="window.location.href='../pages/iniciarsesion.html'" type=" button" class="btn btn-dark"
+     style="background:#C9C9C9;color: black; font-family:'Poppins', sans-serif;" id="iniciar"> Iniciar
      Sesión </button></li>
      </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -32,8 +32,8 @@ window.addEventListener("load", function (e) {
     <div class="footer-col">
       <h4 class = "compfoter">Compañia </h4>
       <ul>
-        <li><a href="../pages/conocenos.html">Acerca de nosotros</a></li>
-        <li><a href="../pages/lista_de_items.html">Nuestros Servicios</a></li>
+        <li><a href="../pages/quienessomos.html">Acerca de nosotros</a></li>
+        <li><a href="../pages/servicios.html">Nuestros Servicios</a></li>
         <li><a href="../pages/contacto.html">Contáctanos</a></li>
         <li><a href="../pages/registro.html">Regístrate</a></li>
         <li><a href="#">Iniciar Sesión</a></li>
