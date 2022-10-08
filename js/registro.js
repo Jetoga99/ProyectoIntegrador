@@ -13,7 +13,6 @@ if (localStorage.key(0)) {
     }
 
   }
-  cont++;
   console.log(" " + cont);
 }
 
@@ -144,7 +143,7 @@ btn.addEventListener("click", function (e) {
 
   })
 
-  if (((ValidateName(FullName))) && ((ValidateNumber(phoneNumber))) && ((ValidateEmail(Email))) && ((ValidatePasswords(password1, password2))) && (flag)) {
+  if (((ValidateName(FullName))) && ((ValidateNumber(phoneNumber))) && ((ValidateEmail(Email))) && ((ValidatePasswords(password1, password2))) && (flag)) {//valida que toda las condiciones han sido respetadas y procede a cargar el archivo json
     console.log("se ha creado una clase con nombre : " + FullName);
     let key = cont.toString();
     console.log(key);
@@ -158,7 +157,6 @@ btn.addEventListener("click", function (e) {
       showConfirmButton: false,
       timer: 1500
     })
-
     document.getElementById("inputEmail").value = "";
     document.getElementById("inputName").value = "";
     document.getElementById("phoneNumber").value = "";
@@ -188,11 +186,16 @@ function ValidateEmail(usr_email) {
             title: 'El correo ingresado ya existe, ¿desea iniciar sesión?',
             icon: 'question',
             iconHtml: '¿?',
-            confirmButtonText: 'Iniciar sesión',
+            confirmButtonText: `<a href="/pages/iniciarsesion.html">Iniciar sesión </a>`,
             cancelButtonText: 'Cancelar',
             showCancelButton: true,
-            showCloseButton: true
+            showCloseButton: true,
+            isClicked: false,
+            focusConfirm: true
           })
+
+
+
           flag = false;
 
           break;
@@ -216,7 +219,7 @@ function ValidateEmail(usr_email) {
 }
 
 function ValidateName(name) {
-  let regx = /^([a-zA-Z]+)([a-zA-Z ]+)([a-zA-Z])?$/;
+  let regx = /^([a-zA-Z\_.é]+)([a-zA-Zá-ú ]+)([a-zA-Zá-ú ])?$/;
   if ((name.match(regx)) && (name.length >= 3)) {
     console.log("valid name")
     return true;
