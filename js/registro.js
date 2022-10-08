@@ -157,7 +157,6 @@ btn.addEventListener("click", function (e) {
       showConfirmButton: false,
       timer: 1500
     })
-
     document.getElementById("inputEmail").value = "";
     document.getElementById("inputName").value = "";
     document.getElementById("phoneNumber").value = "";
