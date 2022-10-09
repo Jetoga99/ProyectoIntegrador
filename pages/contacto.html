@@ -42,45 +42,37 @@
             </div>
 
         </div>
-        <div class="hero">
+        <div class="wrapper">
             <form action="https://formspree.io/f/mnqrprjy" method="POST" id="subscribe">
                 <div class="container px-lg-5">
                     <div class="row mx-lg-n5">
                         <div class="col">
-                            <div class="input-group  ">
+                            <div class="input-group ">
                                 <input name="Nombre" maxlength="35" minlength="1" type="text" id="Nombre" required
                                     autofocus>
                                 <label for="Nombre"><i class="fa-solid fa-user "></i> Nombre</label>
-                                <div id="NameAlert">
-                                    <!--aqui va la cooreccion de un nombre no valido-->
-                                </div>
+
                             </div>
 
 
                             <div class="input-group">
                                 <input name="Email" type="text" id="email" required>
                                 <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico </label>
-                                <div id="EmailAlert">
-                                    <!--codigo para corregir mala entrada-->
-                                </div>
+
                             </div>
                             <div class="input-group">
                                 <input name="Number" maxlength="10" minlength="1" type="text" id="Number" required>
                                 <label for="Number"><i class="fas fa-phone-square-alt"></i> Teléfono </label>
-                                <div id="NumberAlert">
-                                    <!--codigo para corregir mala entrada de numero-->
-                                </div>
+
                             </div>
                         </div>
 
-                        <div class="col col-md-6 ">
+                        <div class="col">
                             <div class="input-group">
                                 <textarea style="resize:none ;" name="Msg" spellcheck="false" id="message_1" rows="7"
                                     required></textarea>
                                 <label for="message"><i class="fas fa-comments"></i> Mensaje</label>
-                                <div id="MessageAlert">
-                                    <!--codigo para corregir mala entrada de Mensaje-->
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -91,11 +83,20 @@
                                     Enviar</span></button>
                         </div>
                     </div>
+
                 </div>
             </form>
+
         </div>
+
     </main>
     <br><br><br><br><br>
+    <div class="row">
+        <div class="col" id="AlertMessage">
+            <!--codigo para corregir mala entrada de Mensaje-->
+        </div>
+    </div>
+
     <footer class=" footer">
 
     </footer>
