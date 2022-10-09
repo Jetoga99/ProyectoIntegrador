@@ -24,10 +24,8 @@
 #header * {
     transition: ease-in-out 0.3s;
 }
-/* aqui  empieza la animacion de desvanecimiento de derecha a izquierda de toda la pagina */
+/* aqui  termina la animacion de desvanecimiento de derecha a izquierda de toda la pagina */
 
-
-/* aqui empieza el css de conocenos */
 body {
     background: rgba(217, 218, 220, 0.7);
 }
@@ -68,7 +66,7 @@ body {
     justify-content: space-between;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.7);
     white-space: nowrap;
@@ -511,6 +509,7 @@ address {
 
 .conocenosp {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
     text-align: justify;
 }
 
@@ -541,7 +540,7 @@ address {
     text-align: justify;
     background-color: white;
     transition: all ease-in-out 0.3s;
-    height: 40vw;
+    height: 38vw;
 }
 
 .cardconocenos:hover {
@@ -572,7 +571,3 @@ address {
 } */
 
 /* aqui termina el css de conocenos */
-
-/*aqui empieza el css de contacto*/
-
-/*aqui termina el css de contacto*/
