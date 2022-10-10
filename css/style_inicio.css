@@ -29,13 +29,6 @@
     text-align: center;
 }
 
-.cardinicio {
-    text-align: justify;
-    background-color: white;
-    transition: all ease-in-out 0.3s;
-    height: 21vw;
-    width: 22vw;
-}
 
 .cardinicio:hover {
     display: flex;
