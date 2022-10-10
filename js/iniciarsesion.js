@@ -8,7 +8,7 @@ var Email_Warning = document.getElementById("EmailWarn");
 let emails = [];
 let passwords = [];
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener("click", async function (e) {
     e.preventDefault();
     let email = document.getElementById("inputEmail").value;
     let pw = document.getElementById("inputPassword1").value;
@@ -55,7 +55,19 @@ btn.addEventListener("click", function (e) {
             console.log("here")
             is.style.display = "none"
             reg.style.display = "none";
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '¡Has ingresado correctamente¡',
+                showConfirmButton: false,
+                timer: 2500
+            })
+
+
+
             window.location.href = "../index.html"
+
         }
 
     }
@@ -87,4 +99,7 @@ function ValidatePassword(valor) {
 
     }
 
+};
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 };
