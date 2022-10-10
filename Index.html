@@ -9,33 +9,126 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="icon" href="../src/logo.ico">
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="https://kit.fontawesome.com/8a76b94897.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="./css/style_inicio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://kit.fontawesome.com/fd5785194c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bodyinicio">
   <header id="header">
     <div class="container" id="nav">
-
     </div>
-
   </header>
-  <main class="container">
-    <h1>Inicio</h1>
+  <br>
+  <main class="container mainninicio">
     <section>
-
+      <div data-aos="zoom-in">
+        <h1 class="h1inicioD">"¿Necesitas desarrollar páginas web?, ¿una base de datos? ó ¿una actualización de tus
+          servicios?, ¡no debes preocuparte! todo está bien, porque nosotros estamos aquí, IT KNIFES WEB SERVICES cuenta
+          con un amplio catálogo de trabajadores altamente calificados para darte soluciones."</h1>
+      </div>
     </section>
+    <br><br>
+    <section>
+      <h1 class="h1inicio" data-aos="zoom-in"> Algunos de los Servicios con los que Contamos</h1>
+      <br>
+      <div class="container__slider">
+
+        <div class="container_slider1">
+          <input type="radio" name="slider" id="item-1" checked>
+          <input type="radio" name="slider" id="item-2">
+          <input type="radio" name="slider" id="item-3">
+
+          <div class="cards" data-aos="zoom-in">
+            <label class="card" for="item-1" id="selector-1">
+              <h4 class="h4serv">Diseño de Páginas Web</h4>
+              <img class="imginicio" src="../src/dweb.jpg">
+            </label>
+            <label class="card" for="item-2" id="selector-2">
+              <h4 class="h4serv">Diseño de Aplicaciones Móviles</h4>
+              <img class="imginicio" src="../src/deapp.jpg">
+            </label>
+            <label class="card" for="item-3" id="selector-3">
+              <h4 class="h4serv"> Diseño de Páginas Web </h4>
+              <img class="imginicio" src="../src/disgra.jpg">
+            </label>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <button onclick="window.location.href='../pages/servicios.html'" type="button" class="btn btn-dark"
+        style=" font-family:'Poppins', sans-serif;" id="vermas"><span> Ver más
+        </span></button>
+    </section>
+    <br><br>
+    <section>
+      <h1 class="h1inicio">Equipo de IT KNIFE WEB SERVICE</h1>
+      <br><br>
+      <div class="row" style="display: flexbox;justify-content: center;">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in-down">
+          <div class="cardinicio text-black ">
+            <img src="../src/Rodrigo.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">Rodrigo</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in-down">
+          <div class="cardinicio text-black">
+            <img src="../src/Aldo1.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">Aldo</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in-down">
+          <div class="cardinicio text-black">
+            <img src="../src/irving.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">Irving</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in-down">
+          <div class="cardinicio text-black">
+            <img src="../src/Andres1.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">Andrés</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in-down">
+          <div class="cardinicio text-black">
+            <img src="../src/Joseph1.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">José</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in-down">
+          <div class="cardinicio text-black">
+            <img src="../src/Jesus.png" class="cardconocenos-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title inicioh4">Jesús</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <button onclick="window.location.href='../pages/quienessomos.html'" type="button" class="btn btn-dark"
+        style=" font-family:'Poppins', sans-serif;" id="vermas"><span> Ver más
+        </span></button>
+    </section><br><br><br>
+    <br><br><br><br><br>
   </main>
   <footer class="footer">
   </footer>
+  <script>
+    AOS.init();
+  </script>
   <script src="/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
