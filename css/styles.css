@@ -31,10 +31,6 @@ body {
 }
 
 
-
-
-
-
 /* aqui empieza el css de la barra de navegacion */
 .navbar {
     padding: 0;
@@ -538,7 +534,7 @@ address {
 
 .cardconocenos {
     text-align: justify;
-    background-color: white;
+    background-color: rgba(217, 218, 220, 0.7);
     transition: all ease-in-out 0.3s;
     height: 38vw;
 }

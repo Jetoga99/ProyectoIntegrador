@@ -2,7 +2,7 @@
     text-align: justify;
     position: relative;
     font-size: 28px;
-    background: linear-gradient(to right, black, slategrey, black);
+    background: linear-gradient(to right, black, black, black);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
