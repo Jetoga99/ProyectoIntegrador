@@ -25,34 +25,45 @@
       </div>
     </div>
     <div class="alert alert-danger container" role="alert" id="alerta" style="display:none"></div>
-    <div class="hero">
+
+    <div class="wrapper">
       <form id="form">
         <div class="row">
-          <div class="col">
-            <div class="input-group  ">
-              <input maxlength="35" minlength="1" type="text" id="producto" class="is-invalid" required autofocus>
-              <label for="Nombre"><i class="fa-solid fa-user "></i> Nombre del producto</label>
-            </div>
-            <div class="input-group">
-              <textarea spellcheck="false" id="descripcion" rows="8" required></textarea>
-              <label for="descripcion"><i class="fas fa-comments"></i> Descripción del producto e imagen</label>
-            </div>
-            <div class="input-group  ">
-              <input maxlength="35" minlength="1" type="file" id="file" name="image" required>
-              <div class="preview">
-                <p id="username"></p>
-                <img id="image">
-              </div><label for="archivo">
-              </label>
-            </div>
+          <div class="input-group">
+            <input maxlength="35" minlength="1" type="text" id="producto" class="is-invalid" required autofocus>
+            <label for="Nombre"><i class="fa-solid fa-user "></i> Nombre del producto</label>
           </div>
+          <div class="input-group">
+            <textarea spellcheck="false" id="descripcion" rows="8" required style="resize:none"></textarea>
+            <label for="descripcion"><i class="fas fa-comments"></i> Descripción del producto e imagen</label>
+          </div>
+          <div class="input-group  ">
+            <input maxlength="35" minlength="1" type="file" id="file" name="image" required>
+            <label for="archivo">
+            </label>
+          </div>
+
+
         </div>
-        <div class="text-center">
-          <button id="submit_btn" type="submit">Registrar</button>
+
+        <div class="col">
+          <div class="preview">
+            <p id="username"></p>
+            <img id="image">
+          </div>
+          <div class="text-center">
+            <button id="submit_btn" type="submit">Registrar</button>
+          </div>
         </div>
       </form>
     </div>
+
+
   </main>
+
+
+
+
   <script src="/js/formulario.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
