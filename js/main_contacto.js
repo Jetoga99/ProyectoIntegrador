@@ -177,7 +177,7 @@ function ValidateNumber(number) {
 
     }
 
-};
+}
 
 function ValidateMessage(Message) {
     if ((document.getElementById("message_1").value) && ((document.getElementById("message_1").value)[0] != ' ') && (Message.length > 15)) {

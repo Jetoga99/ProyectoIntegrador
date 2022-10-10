@@ -3,12 +3,18 @@ let alerta = document.getElementById("alerta");
 let producto = document.getElementById("producto");
 let descripcion = document.getElementById("descripcion");
 let imagen = document.querySelector("#file");
+let btnFake = document.getElementById('btnFake');
+let leyenda = document.getElementById('leyenda');
 let img = " ";
 let cont = 1;
 let listaServicios = [];
 const key = "Serv"
 let prev = document.getElementById("preview");
 
+btnFake.addEventListener("click", function (e) {
+    e.preventDefault();
+    imagen.click();
+})
 
 submit_btn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -27,7 +33,7 @@ submit_btn.addEventListener("click", function (e) {
                 console.log(servicio);
                 localStorage.setItem(key, JSON.stringify(listaServicios));
                 //Llama a la funcion preview para mostrar un preview de la card a mostrar
-                prev.innerHTML = preview(servicio.nombre, servicio.description, servicio.Imagen, servicio.id);
+
                 //cambia el texto de la alerta 
                 //cambia la clase de la alerta de alert-danger a alert-success
                 alerta.innerText = "Servicio agregado";
@@ -38,6 +44,8 @@ submit_btn.addEventListener("click", function (e) {
                 descripcion.value = "";
                 imagen.value = null;
                 img = "";
+                prev.innerHTML = '';
+                leyenda.innerText = '';
                 const $image = document.querySelector('#image');
                 $image.setAttribute('src', " ");
             } else {
@@ -89,7 +97,10 @@ imagen.addEventListener("change", function () {
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         //Codigo de imagen guardada en variable "img"
+
         img = reader.result;
+
+
         //console.log(img);
         //localStorage.setItem("recent-image", reader.result);
     });
@@ -104,7 +115,11 @@ const $file = document.querySelector('#file')
 function renderImage(formData) {
     const file = formData.get('image')
     const image = URL.createObjectURL(file)
-    $image.setAttribute('src', image)
+    prev.innerHTML = '';
+    leyenda.innerText = '';
+    //$image.setAttribute('src', image)
+
+    prev.innerHTML = preview(producto.value, descripcion.value, image, cont);
 }
 
 

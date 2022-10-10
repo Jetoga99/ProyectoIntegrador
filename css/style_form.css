@@ -26,20 +26,26 @@ body {
 
 }
 
+.text-center {
+    font-size: xx-large;
+}
 
-.preview {
+#preview {
+    width: auto;
     display: flex;
     justify-content: center;
+
+}
+
+#leyenda {
+    text-align: center;
 }
 
 
-
-
 .input-group {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     position: relative;
-    /* display: flex;
-    justify-content: center;*/
+
 
 
 }
@@ -53,13 +59,14 @@ textarea {
     outline: 0;
     border: 3px solid rgb(0, 0, 0);
     background: transparent;
-    font-size: 15px;
+    font-size: 25px;
     border-radius: 15px;
     max-width: auto;
     min-height: auto;
     max-height: max-content;
     min-width: 150px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 
 
 }
@@ -79,6 +86,7 @@ label {
     color: rgb(8, 7, 7);
     cursor: text;
     transition: 0.2s;
+    font-size: x-large;
 
 }
 
@@ -115,15 +123,32 @@ textarea:valid~label {
 }
 
 
-@media (max-width:800px) {
+@media (max-width:700px) {
     #image {
-        min-width: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     body {
-        line-height: 1.5;
         font-family: 'poppins', sans-serif;
         background: rgba(217, 218, 220, 0.7);
+        font-size: small;
+    }
+
+    label {
+        font-size: large;
+    }
+}
+
+
+@media (max-width:450px) {
+    label {
+        font-size: x-small;
+
+    }
+
+    input,
+    textarea {
         font-size: small;
     }
 }

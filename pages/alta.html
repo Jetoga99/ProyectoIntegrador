@@ -38,7 +38,8 @@
             <label for="descripcion"><i class="fas fa-comments"></i> Descripción del producto e imagen</label>
           </div>
           <div class="input-group  ">
-            <input maxlength="35" minlength="1" type="file" id="file" name="image" required>
+            <input type="button" class="form-control btn btn-dark" value="Subir imagen" id="btnFake">
+            <input maxlength="35" minlength="1" type="file" id="file" name="image" required style="display:none;">
             <label for="archivo">
             </label>
           </div>
@@ -47,8 +48,8 @@
         </div>
 
         <div class="col">
-          <div class="preview">
-            <p id="username"></p>
+          <div id="preview">
+            <p id="leyenda"></p>
             <img id="image">
           </div>
           <div class="text-center">
