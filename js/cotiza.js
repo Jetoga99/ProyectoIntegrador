@@ -219,7 +219,7 @@ function ValidateNumber(number) {
 
 
 
-function Validatepostal(cp) {
+function Validatepostal(number) {
 
     let regx = /^([1-9-0]+)([1-9])?$/;
 

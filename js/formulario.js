@@ -39,15 +39,16 @@ submit_btn.addEventListener("click", function (e) {
                 alerta.innerText = "Servicio agregado";
                 alerta.classList.remove("alert-danger");
                 alerta.classList.add("alert-success");
+
                 //Regresando todos los valores a vacio para nuevo servicio
-                producto.value = " ";
+                producto.value = "";
                 descripcion.value = "";
                 imagen.value = null;
                 img = "";
                 prev.innerHTML = '';
                 leyenda.innerText = '';
-                const $image = document.querySelector('#image');
-                $image.setAttribute('src', " ");
+                // const $image = document.querySelector('#image');
+                //$image.setAttribute('src', "");
             } else {
                 imagen.style.borderColor = "#FF0000";
                 alerta.innerText = "Error - No hay imagen";
