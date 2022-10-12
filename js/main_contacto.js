@@ -104,8 +104,9 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
         let new_user = { "usr_id": cont, "usr_fullName": usr_name, "usr_email": usr_email, "usr_phone": usr_number, "usr_message": mensaje };
         cont++;
         usuarios.push(new_user);
-        console.log(usuarios);
         form.submit();
+        Swal.fire('¡Su información ha sido enviada, espere pronto nuestra respuesta!')
+
         localStorage.setItem(key, JSON.stringify(usuarios));
         usr_email = "";
         document.getElementById("email").value = usr_email;

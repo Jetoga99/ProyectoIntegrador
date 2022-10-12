@@ -13,7 +13,7 @@ if (localStorage.key(0)) {
     }
 
   }
-  console.log(" " + cont);
+
 }
 
 
@@ -43,7 +43,6 @@ if (localStorage.key(0)) {
       let name = '';
       temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
       // name = console.log(temp[index]);
-      console.log("hola aqui ando: " + parseInt(localStorage.key(index)));
       name = new user(temp[i].Name, temp[i].Phone, temp[i].Email, temp[i].User_password);
       i++;
     }
@@ -181,7 +180,6 @@ function ValidateEmail(usr_email) {
       if (!(isNaN((parseInt(localStorage.key(index)))))) {
         temp[i] = JSON.parse(localStorage.getItem(localStorage.key(index)));
         if ((temp[i].Email) === usr_email) {
-          console.log("el correo electronico ya esta registrada, desea iniciar sesion?");
           Swal.fire({
             title: 'El correo ingresado ya existe, ¿desea iniciar sesión?',
             icon: 'question',
@@ -207,11 +205,8 @@ function ValidateEmail(usr_email) {
   var regx = /^([a-zA-Z0-9-.-_]+)@([a-zA-Z0-9]+)[.]([a-z]+)(.[a-z]+)?$/;
   if (usr_email.match(regx)) {
 
-    console.log("valid email ")
-
     return true;
   } else {
-    console.log("invalid email ")
     return false;
 
   }
@@ -221,12 +216,10 @@ function ValidateEmail(usr_email) {
 function ValidateName(name) {
   let regx = /^([a-zA-Z\_.é]+)([a-zA-Zá-ú ]+)([a-zA-Zá-ú ])?$/;
   if ((name.match(regx)) && (name.length >= 3)) {
-    console.log("valid name")
     return true;
 
   } else {
 
-    console.log("invalid name ")
     return false;
 
   }
@@ -240,13 +233,11 @@ function ValidateNumber(number) {
 
 
   if ((number.match(regx)) && (number.length == 10)) {
-    console.log("valid number")
 
     return true;
 
   } else {
 
-    console.log("ivalid number")
     return false;
 
   }
@@ -258,12 +249,9 @@ function ValidatePasswords(password1, password2) {
   var regx = /^([a-zA-Z0-9]+)([a-zA-Z0-9])?$/;
 
   if ((password1.match(regx)) && (password1.length >= 8) && (password2 === password1) && (password2.match(regx)) && (password2.length >= 8)) {
-    console.log(password1 + " " + password2 + "   COINCIDEN");
     return true;
 
   } else {
-
-    console.log(password1 + " " + password2 + " no coinciden");
     return false;
 
   }

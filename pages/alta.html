@@ -38,32 +38,37 @@
             <label for="descripcion"><i class="fas fa-comments"></i> Descripción del producto e imagen</label>
           </div>
           <div class="input-group  ">
-            <input type="button" class="form-control btn btn-dark" value="Subir imagen" id="btnFake">
+            <input type="button" class="form-control btn btn-dark" value="Click para subir imagen" id="btnFake">
             <input maxlength="35" minlength="1" type="file" id="file" name="image" required style="display:none;">
             <label for="archivo">
             </label>
           </div>
 
-
         </div>
 
         <div class="col">
+          <p style="text-align:center ;" id="leyenda">VISTA PREVIA DE LA PUBLICACIÓN</p>
           <div id="preview">
-            <p id="leyenda"></p>
-            <img id="image">
+
           </div>
+
           <div class="text-center">
             <button id="submit_btn" type="submit">Registrar</button>
           </div>
         </div>
       </form>
+
     </div>
+
+
+
 
 
   </main>
 
 
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script src="/js/formulario.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
