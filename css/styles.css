@@ -554,6 +554,16 @@ address {
     }
 }
 
+
+@media (max-width:700px) {
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+
+    }
+}
+
 /* .formulario {
     margin-top: 2em;
     padding: 3em;
