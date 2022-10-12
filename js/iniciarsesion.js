@@ -67,6 +67,7 @@ btn.addEventListener("click", async function (e) {
         else if ((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw))) {
             let name = JSON.parse(localStorage.getItem(localStorage.key(0)))["Name"];
 
+            sessionStorage.setItem('status', 'loggedIn');
             Swal.fire({
                 position: 'center',
                 icon: 'success',
