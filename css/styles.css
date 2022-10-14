@@ -545,6 +545,10 @@ address {
     object-fit: contain;
 }
 
+.cardservicios {
+    width: 100%;
+}
+
 @media (max-width:910px) {
     .cardconocenos-img-top {
         width: 100%;
@@ -555,7 +559,7 @@ address {
 }
 
 
-@media (max-width:700px) {
+@media (max-width:770px) {
     .card-img-top {
         width: 100%;
         height: auto;
