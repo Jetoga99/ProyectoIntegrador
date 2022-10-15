@@ -104,9 +104,21 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
         let new_user = { "usr_id": cont, "usr_fullName": usr_name, "usr_email": usr_email, "usr_phone": usr_number, "usr_message": mensaje };
         cont++;
         usuarios.push(new_user);
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "andrestecpile97",
+            Password: "5E02F41D572496E82BDF6E2F71362123A65BFA385B7B171E9D72DADF6D9E979D74FAD22F1BB83284625BC0A22DC666CA",
+            To: 'andrestecpile97@gmail.com',
+            From: "a16310397@ceti.mx",
+            Subject: "This is the subject",
+            Body: "And this is the body"
+        }).then(
+            message => alert(message)
+        );
         form.submit();
-        Swal.fire('¡Su información ha sido enviada, espere pronto nuestra respuesta!')
 
+
+        Swal.fire('¡Su información ha sido enviada, espere pronto nuestra respuesta!');
         localStorage.setItem(key, JSON.stringify(usuarios));
         usr_email = "";
         document.getElementById("email").value = usr_email;
@@ -133,11 +145,9 @@ function ValidateEmail(usr_email) {
     var regx = /^([a-zA-Z0-9-.-_]+)@([a-zA-Z0-9]+)[.]([a-z]+)(.[a-z]+)?$/;
     if (usr_email.match(regx)) {
         // alert("Valid email address!");
-        console.log("valid email ")
 
         return true;
     } else {
-        console.log("invalid email ")
         // alert("Invalid email address!");
         return false;
 
@@ -148,12 +158,10 @@ function ValidateEmail(usr_email) {
 function ValidateName(name) {
     let regx = /^([a-zA-Z\_.é]+)([a-zA-Zá-ú ]+)([a-zA-Zá-ú ])?$/;
     if ((name.match(regx)) && (name.length >= 3)) {
-        console.log("valid name")
         return true;
 
     } else {
 
-        console.log("invalid name ")
         return false;
 
     }
@@ -167,13 +175,12 @@ function ValidateNumber(number) {
 
 
     if ((number.match(regx)) && (number.length == 10)) {
-        console.log("valid number")
 
         return true;
 
     } else {
 
-        console.log("ivalid number")
+
         return false;
 
     }
@@ -183,11 +190,11 @@ function ValidateNumber(number) {
 function ValidateMessage(Message) {
     if ((document.getElementById("message_1").value) && ((document.getElementById("message_1").value)[0] != ' ') && (Message.length > 15)) {
         // alert("Valid email address!");
-        console.log("si pase mira");
+
 
         return true;
     } else {
-        console.log("invalid Message ")
+
         // alert("Invalid email address!");
         return false;
     }
