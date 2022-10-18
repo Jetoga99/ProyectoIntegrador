@@ -1,6 +1,8 @@
 let submit_btn = document.getElementById("submit_btn");
 let alerta = document.getElementById("alerta");
 let producto = document.getElementById("producto");
+let precio = document.getElementById("price");
+
 let descripcion = document.getElementById("descripcion");
 let imagen = document.querySelector("#file");
 let btnFake = document.getElementById('btnFake');
@@ -26,7 +28,7 @@ submit_btn.addEventListener("click", function (e) {
             if (imagen.value != 0) {//validacion de imagen
                 imagen.style.borderColor = "";
                 //Crea el objeto servicio con id, nombre y descripcion
-                let servicio = { "id": 0, "name": producto.value, "description": descripcion.value, "Imagen": img }
+                let servicio = { "id": 0, "name": producto.value, "price": parseInt(precio.value), "description": descripcion.value, "Imagen": img }
                 // Agrega el objeto servicio a lista de servicios
                 listaServicios.push(servicio);
                 //comvierte el objeto en json y lo guarda en el localstorage
@@ -49,6 +51,7 @@ submit_btn.addEventListener("click", function (e) {
                 //Regresando todos los valores a vacio para nuevo servicio
                 producto.value = "";
                 descripcion.value = "";
+                precio.value = ""
                 imagen.value = null;
                 img = "";
                 prev.innerHTML = '';

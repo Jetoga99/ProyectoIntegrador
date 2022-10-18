@@ -205,6 +205,24 @@ input[type=radio] {
   text-align: justify;
 }
 
+
+@media (max-width:700px) {
+  .info {
+    margin: 30px;
+  }
+
+  .info h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .info p {
+    margin-bottom: 15px;
+    font-size: 17px;
+
+  }
+}
+
 /* .info a {
   color: #fff;
   text-decoration: none;
