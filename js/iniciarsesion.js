@@ -1,5 +1,4 @@
 
-
 var btn = document.getElementById("btn_submit");
 var Email_Warning = document.getElementById("EmailWarn");
 
