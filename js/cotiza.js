@@ -146,14 +146,12 @@ btnCot.addEventListener("click", function (e) {//aqui creamos unn evento para el
                 mensaje = "";
                 document.getElementById("message_1").value = mensaje; */
         let price = 0;
-        console.log(Array.from(servicio.selectedOptions).map(option => option.index))
 
-        let indexs = Array.from(servicio.selectedOptions).map(option => option.index)
-        indexs.forEach(element => {
-            price += cotizar(iva, servicio.element);
-            console.log(cotizar(iva, servicio.element))
-        });
+        let valores = Array.from(servicio.selectedOptions).map(option => price += parseInt(option.value))
+        if (iva) { price = price * 1.16 }
         textCard.innerHTML = "$" + price.toFixed(2) + " Pesos";//aqui Mandamos a imprimir en el textCard el valor de y el tofixed designa el numero maximo de decimales 
+
+        window.print()
 
     }
 
