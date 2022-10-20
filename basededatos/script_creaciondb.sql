@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `knifeservicedb`.`tipo_desarrollador` (
   `Descripción` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Tipo_Desarrollador_Id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -30,14 +31,14 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `knifeservicedb`.`proyecto` (
   `Proyecto_Id` BIGINT NOT NULL AUTO_INCREMENT,
-  `Descripción` VARCHAR(255) NOT NULL,
+  `Descripción` VARCHAR(8000) NOT NULL,
   `Costo` DOUBLE NOT NULL,
   `Fecha_Inicio` DATE NOT NULL,
   `Fecha_Fin` DATE NULL DEFAULT NULL,
   `Cliente` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`Proyecto_Id`))
 ENGINE = InnoDB
-
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -48,13 +49,13 @@ CREATE TABLE IF NOT EXISTS `knifeservicedb`.`desarrollador` (
   `Desarrollador_Id` BIGINT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(255) NOT NULL,
   `Apellidos` VARCHAR(255) NOT NULL,
-  `Email` VARCHAR(30) NOT NULL,
+  `Email` VARCHAR(255) NOT NULL,
   `Contraseña` VARCHAR(255) NOT NULL,
   `Tipo_Desarrollador` BIGINT NOT NULL,
   `Proyecto_Id` BIGINT NOT NULL,
   PRIMARY KEY (`Desarrollador_Id`, `Tipo_Desarrollador`, `Proyecto_Id`))
 ENGINE = InnoDB
-
+AUTO_INCREMENT = 7
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -64,11 +65,11 @@ DEFAULT CHARACTER SET = utf8mb3;
 CREATE TABLE IF NOT EXISTS `knifeservicedb`.`servicios` (
   `Servicios_Id` BIGINT NOT NULL AUTO_INCREMENT,
   `Servicio_Nombre` VARCHAR(255) NOT NULL,
-  `Servicio_Descripción` VARCHAR(255) NOT NULL,
-  `Imagen` VARCHAR(255) NOT NULL,
+  `Servicio_Descripción` VARCHAR(1000) NOT NULL,
+  `Imagen` VARCHAR(1000) NOT NULL,
   PRIMARY KEY (`Servicios_Id`))
 ENGINE = InnoDB
-
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -82,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `knifeservicedb`.`proyecto_servicios` (
   PRIMARY KEY (`proy_serv_id`, `Proyecto_Id`, `Servicios_Id`),
   UNIQUE INDEX `proy_serv_id_UNIQUE` (`proy_serv_id` ASC) VISIBLE)
 ENGINE = InnoDB
-
+AUTO_INCREMENT = 7
 DEFAULT CHARACTER SET = utf8mb3;
 
 
