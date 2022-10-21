@@ -27,15 +27,18 @@ VALUES (1,1,3),(0,2,1),(0,3,4),(0,4,2),(0,5,5);
 -- Script de llenado de la tabla servicios
 INSERT INTO `knifeservicedb`.`Servicios` (`Servicios_Id`,`Servicio_Nombre`, `Servicio_Descripción`, `Imagen`) 
 VALUES (1,'Diseño de páginas web', 'Servicio de creación y desarrollo de páginas web',
-_binary 'C:\Users\andre\Desktop\final_project\ProyectoIntegrador\src\dweb.jpg'),
+
+'../src/dweb.jpg'),
 (2,'Diseño Base de Datos', 'Creación y desarrollo de aplicaciones para Android y IOS.',
-_binary 'C:\Users\andre\Desktop\final_project\ProyectoIntegrador\src\bd.jpg '),
+'../src/bd.jpg'),
 (3,'Mantenimiento de Sistemas', 'Servicio a Hardware, limpieza de equipos y mantenimiento de software.',
-_binary 'C:\Users\andre\Desktop\final_project\ProyectoIntegrador\src\mans.jpg '),
+'../src/mans.jpg'),
 (4,'Actualización de Proyectos', 'Servicio de Actualización técnica, Contenido y de imagen o diseño web.',
-_binary 'C:\Users\andre\Desktop\final_project\ProyectoIntegrador\src\actproy.jpg '),
+ '../src/actproy.jpg'),
 (5,'Asesoría Técnica', 'Servicio de elaboración de informes, tareas o propuestas de nivel superior.',
-_binary 'C:\Users\andre\Desktop\final_project\ProyectoIntegrador\src\asesortec.JPG ') ;
+ '../src/asesortec.jpg') ;
+
+
 
 
 
