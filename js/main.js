@@ -1,103 +1,10 @@
 
-/* 
-var btn = document.getElementById("btn_submit");
-var Email_Warning = document.getElementById("EmailWarn");
-let bien = document.getElementById("bienvenida");
-
-
-
-let emails = [];
-let passwords = [];
-
-btn.addEventListener("click", function (e) {
-  e.preventDefault();
-  let email = document.getElementById("inputEmail").value;
-  let pw = document.getElementById("inputPassword1").value;
-  if (!validateEmail(email)) {   //validación del correo electrónico 
-    Email_Warning.style.display = "block";
-    Email_Warning.innerHTML = `<div class="alert alert-danger" role="alert">
-        ¡Ingrese un correo electrónico valido ejemplo (nombre@dominio.com)!
-      </div>`;
-    console.log(document.getElementById("inputEmail").style.borderColor);
-    document.getElementById("inputEmail").style.borderColor = "#FF0000";
-
-  }
-  document.getElementById("inputEmail").addEventListener("change", function () {
-    document.getElementById("inputEmail").style.borderColor = "";
-    Email_Warning.style.display = "none";
-  });
-
-  if (!ValidatePassword(pw)) {
-    document.getElementById("passwordAlert").style.display = "block";
-    document.getElementById("passwordAlert").innerHTML = `<div class="alert alert-danger" role="alert">
-        Las contraseñas deben coincidir y debe contener al menos 8 caracteres alfanumérico, sin espacios.
-      </div>`;
-    document.getElementById("inputPassword1").style.borderColor = "#FF0000";
-
-  }
-  document.getElementById("inputPassword1").addEventListener("change", function () {
-    document.getElementById("inputPassword1").style.borderColor = "";
-    document.getElementById("passwordAlert").style.display = "none";
-
-  });
-
-
-  if (validateEmail(email) && (ValidatePassword(pw))) {
-    for (var i = 0, len = localStorage.length; i < len; ++i) {
-      emails.push(JSON.parse(localStorage.getItem(localStorage.key(0)))["Email"]);
-      passwords.push(JSON.parse(localStorage.getItem(localStorage.key(0)))["User_password"]);
-      name = JSON.parse(localStorage.getItem(localStorage.key(0)))["Name"]
-    }
-    console.log((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw)));
-
-
-    if ((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw))) {
-      is = document.getElementById("iniciar");
-      reg = document.getElementById("registrate");
-      console.log("here")
-      is.style.display = "none"
-      reg.style.display = "none";
-      window.location.href = "../index.html"
-      bien.innerHTML = `<h1>Bienvenido${name}</h1>`
-    }
-
-  }
-});
-
-function validateEmail(valor) {
-
-
-  // Define our regular expression.
-  var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
-  // Using test we can check if the text match the pattern
-  if (validEmail.test(valor) && (valor.length > 0)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-function ValidatePassword(valor) {
-
-  var regx = /^([a-zA-Z0-9]+)([a-zA-Z0-9])?$/;
-
-  if ((valor.match(regx))) {
-    return true;
-
-  } else {
-
-    return false;
-
-  }
-
-};
-
-
- */
 let navbar1 = document.getElementById("nav");
 let footer1 = document.getElementsByTagName("footer")[0];
+
 window.addEventListener("load", function (e) {
-  navbar1.innerHTML = `
+  if (sessionStorage.getItem('status') == null) {
+    navbar1.innerHTML = `
     <nav id="navbar" class="navbar" style="justify-content: center;">
 
     <ul>
@@ -117,7 +24,25 @@ window.addEventListener("load", function (e) {
         <i class="bi bi-list mobile-nav-toggle"></i>
 
 
-</nav>`;
+</nav>`} else {
+    navbar1.innerHTML = `
+<nav id="navbar" class="navbar" style="justify-content: center;">
+
+<ul>
+ <li><a href="#">
+ <img src="../src/Logo.png" width="120" class=alt="">
+ </a></li>
+ <li><a class="nav-link active" href="/Index.html">Inicio</a></li>
+ <li><a class="nav-link" href="../pages/quienessomos.html" style="text-align:center;">Acerca de </br>Nosotros</a></li>
+ <li><a class="nav-link" href="../pages/servicios.html">Servicios</a></li>
+ <li><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+ <li><button onclick="sessionStorage.clear();document.location.reload(true)" type="button" class="btn btn-dark" style=" font-family:'Poppins', sans-serif;" id="logout"><span> Cerrar Sesión
+ </span></button></li>
+ </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+
+
+</nav>`};
 
   // se uso el codigo onclick="window.location.href='../pages/registro.html'" para linkear la pagina registro al boton de registro
 
@@ -265,17 +190,3 @@ window.onload = function navbarfunction() {
 };
 
 
-
-/* 
-
-<nav id="navbar" class="navbar">
-  <ul>
-    <li><a class="nav-link active" href="/index.html">Inicio</a></li>
-    <li><a class="nav-link" href="#about">Acerca de Mí</a></li>
-    <li><a class="nav-link" href="#blog">Blog</a></li>
-    <li><a class="nav-link" href="#portfolio">Portafolio</a></li>
-    <li><a class="nav-link" href="#workme">Trabaja Conmigo</a></li>
-    <li><a class="nav-link" href="#contact">Contacto</a></li>
-  </ul>
-  <i class="bi bi-list mobile-nav-toggle"></i>
-</nav> */

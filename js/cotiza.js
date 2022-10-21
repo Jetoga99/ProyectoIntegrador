@@ -1,8 +1,51 @@
+let mainServices = document.getElementById("inputServ")
+
+window.addEventListener("load", function () {
+    getData();
+    leerStorage();
+});
+
+const getData = () => {
+    let promesa = fetch("/js/publicaciones.json", {
+        method: "GET"
+    });
+    promesa.then((response) => {
+        response.json().then((data) => {
+            console.log(data);
+            console.log(typeof (data));
+            data.forEach(producto => {
+                /* console.log(producto.id,producto.title) */
+                mainServices.innerHTML += `<option value="${producto.price}">${producto.name}</option>
+        `;
+
+            });
+        }).catch((error) => {
+            console.error("Problema con formato de la respuesta" + error);
+        });
+    }).catch(error => {
+        console.log("Error en la solicitud" + error)
+    });
+
+
+}
+const leerStorage = () => {
+    if (localStorage.length > 0) {
+        let arregloServ = JSON.parse(localStorage.getItem("Serv"));
+        console.log(typeof (arregloServ));
+        arregloServ.forEach(servicio => {
+            mainServices.insertAdjacentHTML("beforeend", `<option value="${servicio.price}">${servicio.name}</option>
+      `);
+        })//foreach
+    }//if localStrorage
+}//leerStorage
+
+
 let btnCot = document.getElementById("btnCotiza");//aqui insertamos el id del boton cotizar
 
 
 btnCot.addEventListener("click", function (e) {//aqui creamos unn evento para el boton indicandolo dentro de la funcion con la letra e
     e.preventDefault();//aqui se cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá. 
+    let cont = 0;
     let iva = document.getElementById("checkIVA").checked;
     let nombre = document.getElementById("inputName").value;
     let correo = document.getElementById("inputCorreo").value;
@@ -13,7 +56,6 @@ btnCot.addEventListener("click", function (e) {//aqui creamos unn evento para el
     // console.log(iva);//este log lo usamos para verificar si el checkbox del iva esta seleccionado(true) o no(false)
     // console.log(servicio.selectedIndex);//el selectedIndex es para ver que opcion del select fue escogida.
     // console.log(servicio.options[servicio.selectedIndex].value);//muestra el valor que contiene cada uno de nuestros option */
-    textCard.innerHTML = "$" + cotizar(iva, servicio.selectedIndex).toFixed(2) + " Pesos";//aqui Mandamos a imprimir en el textCard el valor de y el tofixed designa el numero maximo de decimales 
 
     //validacion de numero telefonico y correo electronico
     if (!(ValidateNumber(telefono))) {// if de validacion para numero de telefono 
@@ -89,20 +131,27 @@ btnCot.addEventListener("click", function (e) {//aqui creamos unn evento para el
 
     if ((ValidateName(nombre)) && (ValidateEmail(correo)) && ((ValidateNumber(telefono))) && ((Validatepostal(cp)))) {
 
-        let new_user = { "usr_id": cont, "usr_fullName": usr_name, "usr_email": usr_email, "usr_phone": usr_number, "usr_message": mensaje };
-        cont++;
-        usuarios.push(new_user);
-        console.log(usuarios);
-        form.submit();
-        localStorage.setItem(key, JSON.stringify(usuarios));
-        usr_email = "";
-        document.getElementById("email").value = usr_email;
-        usr_name = "";
-        document.getElementById("Nombre").value = usr_name;
-        usr_number = "";
-        document.getElementById("Number").value = usr_number;
-        mensaje = "";
-        document.getElementById("message_1").value = mensaje;
+        /*         let new_user = { "usr_id": cont, "usr_fullName": usr_name, "usr_email": usr_email, "usr_phone": usr_number, "usr_message": mensaje };
+                cont++;
+                usuarios.push(new_user);
+                console.log(usuarios);
+                form.submit();
+                localStorage.setItem(key, JSON.stringify(usuarios));
+                usr_email = "";
+                document.getElementById("email").value = usr_email;
+                usr_name = "";
+                document.getElementById("Nombre").value = usr_name;
+                usr_number = "";
+                document.getElementById("Number").value = usr_number;
+                mensaje = "";
+                document.getElementById("message_1").value = mensaje; */
+        let price = 0;
+
+        let valores = Array.from(servicio.selectedOptions).map(option => price += parseInt(option.value))
+        if (iva) { price = price * 1.16 }
+        textCard.innerHTML = "$" + price.toFixed(2) + " Pesos";//aqui Mandamos a imprimir en el textCard el valor de y el tofixed designa el numero maximo de decimales 
+
+        window.print()
 
     }
 

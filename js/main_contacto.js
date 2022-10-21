@@ -1,11 +1,10 @@
 let btnQuote = document.getElementById("submit_btn");
 const form = document.getElementById("subscribe");
 const div_base = document.getElementsByClassName("input-group ");
-
-
 let key = "informacion_contacto";
 let cont = 0;
 let usuarios = [];
+
 
 if (localStorage.key(0)) {
     for (let index = 0; index < localStorage.length; index++) {
@@ -105,20 +104,17 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
         cont++;
         usuarios.push(new_user);
         Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "andrestecpile97",
-            Password: "5E02F41D572496E82BDF6E2F71362123A65BFA385B7B171E9D72DADF6D9E979D74FAD22F1BB83284625BC0A22DC666CA",
-            To: 'andrestecpile97@gmail.com',
-            From: "a16310397@ceti.mx",
+            SecureToken: "3edc481f-37ac-44f8-bf82-a43a9c2defca",
+            To: 'knifeserviceit2022@gmail.com',
+            From: "andrestecpile97@gmail.com",
             Subject: "This is the subject",
             Body: "And this is the body"
         }).then(
             message => alert(message)
         );
-        form.submit();
-
 
         Swal.fire('¡Su información ha sido enviada, espere pronto nuestra respuesta!');
+
         localStorage.setItem(key, JSON.stringify(usuarios));
         usr_email = "";
         document.getElementById("email").value = usr_email;

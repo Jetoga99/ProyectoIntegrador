@@ -1,5 +1,4 @@
 
-
 var btn = document.getElementById("btn_submit");
 var Email_Warning = document.getElementById("EmailWarn");
 
@@ -46,29 +45,40 @@ btn.addEventListener("click", async function (e) {
             emails.push(JSON.parse(localStorage.getItem(localStorage.key(0)))["Email"]);
             passwords.push(JSON.parse(localStorage.getItem(localStorage.key(0)))["User_password"]);
         }
-        console.log((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw)));
-
-
-        if ((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw))) {
-            is = document.getElementById("iniciar");
-            reg = document.getElementById("registrate");
-            console.log("here")
-            is.style.display = "none"
-            reg.style.display = "none";
-
+        if (!emails.includes(email)) {
             Swal.fire({
                 position: 'center',
-                icon: 'success',
-                title: '¡Has ingresado correctamente¡',
+                icon: 'error',
+                title: '¡El correo no existe¡',
                 showConfirmButton: false,
                 timer: 2500
             })
+        }
+        else if ((emails.includes(email)) && (!passwords.includes(pw))) {
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '¡La contraseña es incorrecta¡',
+                showConfirmButton: false,
+                timer: 2500
+            })
+        }
+        else if ((emails.indexOf(email) == passwords.indexOf(pw)) && (emails.includes(email) && passwords.includes(pw))) {
+            let name = JSON.parse(localStorage.getItem(localStorage.key(0)))["Name"];
 
-
-
-            window.location.href = "../index.html"
+            sessionStorage.setItem('status', 'loggedIn');
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '¡Has ingresado correctamente ' + name + '¡',
+                showConfirmButton: false,
+                timer: 2500
+            }).then(function () {
+                window.location.href = "../index.html";
+            });
 
         }
+
 
     }
 });

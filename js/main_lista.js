@@ -15,15 +15,15 @@ const getData = () => {
       console.log(typeof (data));
       data.forEach(producto => {
         /* console.log(producto.id,producto.title) */
-        mainProds.innerHTML += `<div  card" style="width: 18rem;hover:">
+        mainProds.innerHTML += `<div  class="card" style="height:auto;border:none;text-align:center;">
         <img class="card-img-top" src="${producto.img}" alt="${producto.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${producto.name}</h5>
-          <p class="card-text">${producto.description.slice(0, 30)}...</p>
+         
         
-      <button type="button" class="btn btn-dark mt-auto" data-toggle="modal" data-target="#modal_${producto.id}">
-      Ver más
-    </button>
+      <a  class="card-link stretched-link" data-toggle="modal" data-target="#modal_${producto.id}">
+     
+    </a>
     
     <!-- Modal -->
     <div class="modal fade" id="modal_${producto.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,7 +35,7 @@ const getData = () => {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" style="text-align:justify;">
           ${producto.description}
           </div>
           <div class="modal-footer">
@@ -62,16 +62,15 @@ const leerStorage = () => {
     let arregloServ = JSON.parse(localStorage.getItem("Serv"));
     console.log(typeof (arregloServ));
     arregloServ.forEach(servicio => {
-      mainProds.insertAdjacentHTML("beforeend", `<div  card" style="width: 18rem;hover:">
+      mainProds.insertAdjacentHTML("beforeend", `<div  class="card" style="height:auto;border:none;">
         <img class="card-img-top" src="${servicio.Imagen}" alt="${servicio.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${servicio.name}</h5>
           <p class="card-text">${servicio.description.slice(0, 30)}...</p>
-        
-      <button type="button" class="btn btn-dark mt-auto" data-toggle="modal" data-target="#modal_${servicio.id}">
-      Ver más
-    </button>
-    
+       
+          <a  class="card-link stretched-link" data-toggle="modal" data-target="#modal_${servicio.id}">
+     
+    </a>
     <!-- Modal -->
     <div class="modal fade" id="modal_${servicio.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">

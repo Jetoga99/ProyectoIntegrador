@@ -27,6 +27,7 @@ VALUES (1,1,3),(0,2,1),(0,3,4),(0,4,2),(0,5,5);
 -- Script de llenado de la tabla servicios
 INSERT INTO `knifeservicedb`.`Servicios` (`Servicios_Id`,`Servicio_Nombre`, `Servicio_Descripción`, `Imagen`) 
 VALUES (1,'Diseño de páginas web', 'Servicio de creación y desarrollo de páginas web',
+
 '../src/dweb.jpg'),
 (2,'Diseño Base de Datos', 'Creación y desarrollo de aplicaciones para Android y IOS.',
 '../src/bd.jpg'),
@@ -36,6 +37,8 @@ VALUES (1,'Diseño de páginas web', 'Servicio de creación y desarrollo de pág
  '../src/actproy.jpg'),
 (5,'Asesoría Técnica', 'Servicio de elaboración de informes, tareas o propuestas de nivel superior.',
  '../src/asesortec.jpg') ;
+
+
 
 
 
