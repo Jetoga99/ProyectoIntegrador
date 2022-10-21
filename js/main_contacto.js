@@ -33,7 +33,7 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
 
     if (!(ValidateMessage(mensaje))) {
         document.getElementById("AlertMessage").style.display = "block";
-        document.getElementById("AlertMessage").innerHTML = `<div style="color:red" role="alert">
+        document.getElementById("AlertMessage").innerHTML = `<div class="alert alert-danger" style="color:red" role="alert">
     ¡comente sus dudas sin espacios innecesarios mayor a 15 letras!
   </div>`;
         console.log(document.getElementById("message_1").style.borderColor);
@@ -51,7 +51,7 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
     //validacion de numero telefonico y correo electronico
     if (!(ValidateNumber(usr_number))) {// if de validacion para numero de telefono 
         document.getElementById("AlertMessage").style.display = "block";
-        document.getElementById("AlertMessage").innerHTML = `<div style="color:red" role="alert">
+        document.getElementById("AlertMessage").innerHTML = `<div class="alert alert-danger" style="color:red" role="alert">
     ¡Ingrese su contacto telefónico a 10 dígitos!
   </div>`;
         console.log(document.getElementById("Number").style.borderColor);
@@ -67,7 +67,7 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
 
     if (!ValidateEmail(usr_email)) {   //validación del correo electrónico 
         document.getElementById("AlertMessage").style.display = "block";
-        document.getElementById("AlertMessage").innerHTML = `<div style="color:red" role="alert">
+        document.getElementById("AlertMessage").innerHTML = `<div class="alert alert-danger" style="color:red" role="alert">
     ¡Ingrese un correo válido ejemplo(nombre@dominio.com)!
   </div>`;
         console.log(document.getElementById("email").style.borderColor);
@@ -81,7 +81,7 @@ btnQuote.addEventListener("click", function (e) {  //comando de ejecucion de bot
 
     if (!ValidateName(usr_name)) {  //if de validacion de nombre
         document.getElementById("AlertMessage").style.display = "block";
-        document.getElementById("AlertMessage").innerHTML = `<div style="color:red" role="alert">
+        document.getElementById("AlertMessage").innerHTML = `<div class="alert alert-danger" style="color:red" role="alert">
     ¡Escriba su nombre correctamente!
   </div>`;
         console.log(document.getElementById("Nombre").style.borderColor);
